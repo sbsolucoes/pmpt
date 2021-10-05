@@ -1,0 +1,57 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+/*
+Route::get('/', function () {
+    return view('welcome');
+});
+*/
+Route::get('/', [App\Http\Controllers\NoticiaController::class, 'index'])->name('home');
+
+Route::get('posts/show/{id}', [App\Http\Controllers\NoticiaController::class, 'show'])->name('noticias');
+
+
+
+Route::get('posts/comunicado', [App\Http\Controllers\ComunicadoController::class, 'index'])->name('comunicado');
+
+//Route::get('posts/comissoes', [App\Http\Controllers\ComissoesController::class, 'index'])->name('comissoes');
+
+//Route::get('posts/camara', [App\Http\Controllers\CamaraController::class, 'index'])->name('camara');
+
+//Route::get('posts/perguntas', [App\Http\Controllers\PerguntasController::class, 'index'])->name('faq');
+
+//Route::get('posts/contato', [App\Http\Controllers\ContatoController::class, 'index'])->name('contato');
+
+Route::any('docs/atos', [App\Http\Controllers\DocumentoController::class, 'index'])->name('atos');
+
+Route::get('docs/leis', [App\Http\Controllers\LeiController::class, 'index'])->name('leis');
+
+Route::get('docs/lc', [App\Http\Controllers\LeiComplementarController::class, 'index'])->name('lc');
+
+Route::get('doc/decretos', [App\Http\Controllers\DecretoController::class, 'index'])->name('decretos');
+
+//Route::get('atos/edital', [App\Http\Controllers\EditalController::class, 'index'])->name('edital');
+
+Route::get('docs/portarias', [App\Http\Controllers\PortariaController::class, 'index'])->name('portarias');
+
+Route::get('docs/escolas', [App\Http\Controllers\EscolaController::class, 'index'])->name('escolas');
+
+Route::get('docs/licitacao', [App\Http\Controllers\LicitacaoController::class, 'index'])->name('licitacao');
+
+Route::get('docs/detalheLicitacao', [App\Http\Controllers\DetalheLicitacaoController::class, 'index'])->name('detalheLicitacao');
+
+//Route::get('atos/mocao', [App\Http\Controllers\MocaoController::class, 'index'])->name('mocao');
+
+//Route::get('posts/perguntas', [App\Http\Controllers\PerguntasController::class, 'index'])->name('faq');
