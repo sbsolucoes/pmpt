@@ -12,7 +12,7 @@
                             <hr class="mt-2 mb-2">
                         </div>
                     </div>
-                    <table class="table table-striped">
+                    <table class="table table-striped" style="min-height: 1000px;>
                         <thead>
                     @if(isset($portarias) && count($portarias) > 0)
                             <tr>

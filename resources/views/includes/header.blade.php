@@ -18,6 +18,9 @@
                         <li><a class="dropdown-item" href="">Departamentos</a></li>                        
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{route('concursos')}}">Concursos</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle " href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Educação
@@ -34,39 +37,18 @@
                         Serviços
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="http://191.19.252.59/pmpedrotoledo/websis/siapegov/arrecadacao/baw/certidaoValorVenal.php">Certidão de Valor do Imóvel</a></li>
-                        <li><a class="dropdown-item" href="">Consulta Protocolo</a></li>
-                        <li><a class="dropdown-item" href="">Consulta Veracidade de Certidão</a></li>
-                        <li><a class="dropdown-item" href="">Demostrativo de Pagamento de IPTU</a></li>
-                        <li><a class="dropdown-item" href="">Emissão de Certidão de Débitos de Tributos Imobiliários e Mobiliários</a></li>
-                        <li><a class="dropdown-item" href="">Emissão de Certidão de Débitos de Tributos Imobiliários e Mobiliários</a></li>
-                        <li><a class="dropdown-item" href="">Emissão de 2ª vias de Tributos e Taxas</a></li>
-                        <li><a class="dropdown-item" href="">Emissão de Guia de ITB</a></li>
-                        <li><a class="dropdown-item" href="">Folha de Pagamento Online</a></li>
+                        <li><a class="dropdown-item" href="http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/websis/siapegov/arrecadacao/baw/certidaoValorVenal.php">Certidão de Valor do Imóvel</a></li>
+                        <li><a class="dropdown-item" href="http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/websis/siapegov/administrativo/gpro/protocolo_consulta.php">Consulta Protocolo</a></li>
+                        <li><a class="dropdown-item" href="http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/websis/siapegov/arrecadacao/baw/veracidade_certidao.php">Consulta Veracidade de Certidão</a></li>
+                        <li><a class="dropdown-item" href="http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/websis/siapegov/arrecadacao/iptu/iptu_consulta_pagamentos.php">Demostrativo de Pagamento de IPTU</a></li>
+                        <li><a class="dropdown-item" href="http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/websis/siapegov/arrecadacao/baw/certidao.php?no_cpf=1">Emissão de Certidão de Débitos de Tributos Imobiliários e Mobiliários</a></li>
+                        <li><a class="dropdown-item" href="http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/websis/siapegov/arrecadacao/baw/certidao.php?form=1&">Emissão de Certidão de Débitos de Tributos Imobiliários e Mobiliários com CPF</a></li>
+                        <li><a class="dropdown-item" href="http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/websis/siapegov/arrecadacao/2via/index.php">Emissão de 2ª vias de Tributos e Taxas</a></li>
+                        <li><a class="dropdown-item" href="http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/websis/siapegov/arrecadacao/itbi/itbi_login.php">Emissão de Guia de ITB</a></li>
+                        <li><a class="dropdown-item" href="http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/websis/siapegov/recursos_humanos/grh/grh_rh_online.php">Folha de Pagamento Online</a></li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Transparência
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="http://189.57.94.114:8081/portal-transparencia/rh/estrutura-remuneratoria" target="_blank" alt="Estrutura Remuneratória">Estrutura Remuneratória</a></li>
-                        <li><a class="dropdown-item" href="http://189.57.94.114:8081/portal-transparencia/rh/servidores/ativos" target="_blank" alt="Servidores Ativos">Servidores Ativos</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item"  href="http://191.19.252.59/portal-transparencia/" target="_blank" alt="Portal da TransparÊncia">Portal da Transparência</a>
-                            <ul>
-                                <li><a class="dropdown-item" href="http://189.57.94.114:8081/portal-transparencia/licitacoes/licitacoes" target="_blank" alt="Licitações">Licitações</a></li>
-                                <li><a class="dropdown-item" href="http://189.57.94.114/portal-transparencia/licitacoes/contratos" target="_blank" alt="Contratos">Contratos</a></li>
-                                <li><a class="dropdown-item" href="http://189.57.94.114:8081/portal-transparencia/execucao/adiantamentos" target="_blank" alt="Adiantamento">Adiantamento</a></li>
-                                <li><a class="dropdown-item" href="http://189.57.94.114:8081/portal-transparencia/home" target="_blank" alt="Mais Informações">Mais Informações</a></li>
-                            </ul>
-                        </li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="http://191.19.252.59/pmpedrotoledo/websis/portal_transparencia/financeiro/contas_publicas/index.php?consulta=sic" target="_blank" alt="Acesso a Informação">Acesso a Informação</a></li>
-                        <li><a class="dropdown-item" href="https://pedrodetoledo.sp.gov.br/ouvidoria" target="_blank" alt="Ouvidoria">Ouvidoria</a></li>
-
-                    </ul>
-                </li>
+                <
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Atos Oficiais
@@ -79,15 +61,7 @@
                         <li><a class="dropdown-item" href="{{ route('atos') }}" alt="Leis">Atos</a></li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle " href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Licitações
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="{{ route('licitacao') }}" target="_blank">Pregão</a></li>
-                        <li><a class="dropdown-item" href="">Departamentos</a></li>                        
-                    </ul>
-                </li>
+                
                 <li class="nav-item">
                     <a class="nav-link" href="{{ Storage::url('documentos/pdf/lei-organica-atualizada-2019.pdf') }}" target="_blank">Lei Orgânica</a>
                 </li>

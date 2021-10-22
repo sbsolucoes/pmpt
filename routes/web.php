@@ -23,7 +23,6 @@ Route::get('/', [App\Http\Controllers\NoticiaController::class, 'index'])->name(
 Route::get('posts/show/{id}', [App\Http\Controllers\NoticiaController::class, 'show'])->name('noticias');
 
 
-
 Route::get('posts/comunicado', [App\Http\Controllers\ComunicadoController::class, 'index'])->name('comunicado');
 
 //Route::get('posts/comissoes', [App\Http\Controllers\ComissoesController::class, 'index'])->name('comissoes');
@@ -48,10 +47,16 @@ Route::get('docs/portarias', [App\Http\Controllers\PortariaController::class, 'i
 
 Route::get('docs/escolas', [App\Http\Controllers\EscolaController::class, 'index'])->name('escolas');
 
-Route::get('docs/licitacao', [App\Http\Controllers\LicitacaoController::class, 'index'])->name('licitacao');
+Route::any('docs/licitacao', [App\Http\Controllers\LicitacaoController::class, 'index'])->name('licitacao');
 
-Route::get('docs/detalheLicitacao', [App\Http\Controllers\DetalheLicitacaoController::class, 'index'])->name('detalheLicitacao');
+//Route::get('docs/detalheLicitacao/{idLicitacao}', [App\Http\Controllers\DetalheLicitacaoController::class, 'show'])->name('detalheLicitacao');
 
-//Route::get('atos/mocao', [App\Http\Controllers\MocaoController::class, 'index'])->name('mocao');
+Route::get('docs/detalheLicitacao/{idLicitacao}', [App\Http\Controllers\DetalheLicitacaoController::class, 'index'])->name('detalheLicitacao');
+
+Route::get('docs/concursos', [App\Http\Controllers\ConcursoController::class, 'index'])->name('concursos');
+
+Route::get('docs/concursos_detalhes/{id_conc}', [App\Http\Controllers\ConcursoDetalheController::class, 'show'])->name('conc_det');
+
+Route::get('docs/concursos_detalhes/{doc}', [App\Http\Controllers\ConcursoDetalheController::class, 'index'])->name('download');
 
 //Route::get('posts/perguntas', [App\Http\Controllers\PerguntasController::class, 'index'])->name('faq');

@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Licitacao;
 use App\Models\DetalheLicitacao;
 use Illuminate\Http\Request;
+
 
 class DetalheLicitacaoController extends Controller
 {
@@ -11,11 +12,20 @@ class DetalheLicitacaoController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        $detalheLicitacao = DetalheLicitacao::all($id);
+     */     
+   
+     public function index($idLicitacao)
+    {        
+        
+        $licitacoes = Licitacao::findOrFail($idLicitacao);
+
+        $detalheLicitacao = DetalheLicitacao::where('idLicitacao', $idLicitacao)->where('status', 1)->get();
+
+        //dd($licitacao, $detalheLicitacao);
+        return view('docs.detalheLicitacao', compact('licitacoes','detalheLicitacao'));
+        
     }
+    
 
     /**
      * Show the form for creating a new resource.
@@ -44,11 +54,26 @@ class DetalheLicitacaoController extends Controller
      * @param  \App\Models\DetalheLicitacao  $detalheLicitacao
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($idLicitacao)
     {
-        $detalheLicitacao = DetalheLicitacao::all($id);
-    }
+        
+        $licitacao = Licitacao::findOrFail($idLicitacao);
+        //$dt_licitacao = DetalheLicitacao::where('idLicitacao', $licitacao->idLicitacao)->first()->toArray();
 
+        //$licitacao = Licitacao::with('detalheLicitacao')->get();
+        
+        //$licitacao = Licitacao::where('idLicitacao', $idLicitacao )->with('detalheLicitacao')->find($idLicitacao) ;  
+
+                //dd($licitacao);
+        
+        //foreach($licitacao as $lc) {
+            //echo "$lc->nomeArq";
+
+        //}
+        return view('docs.detalheLicitacao', compact('licitacao',));
+        
+    }
+    
     /**
      * Show the form for editing the specified resource.
      *

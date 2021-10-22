@@ -78,10 +78,11 @@
                                 <p class="text-white"></p>
                                 <p class="text-white"></p>
                                 <p>
-                                    <a href="http://191.19.252.59/portal-transparencia/" target="_blank"><img src="{{ asset('images/transparencia.png') }}" class="img-thumbnail m-1" style="max-width: 200px" alt="Portal da Transparência"></a>
-                                    <a href="http://191.19.252.59/pmpedrotoledo/websis/siapnet/arrecadacao/issonline/iss.login.php" target="_blank"><img src="{{ asset('images/nota-fiscal.png') }}" class="img-thumbnail m-1" style="max-width: 200px" alt="Nota Fiscal Eletrônica"></a>
-                                    <a href="https://pedrodetoledo.sp.gov.br/licitacao" target="_blank"><img src="{{ asset('images/licitacoes.png') }}" class="img-thumbnail m-1" style="max-width: 200px" alt="Licitações"></a>
-                                    <a href="http://191.19.252.59/pmpedrotoledo/websis/portal_transparencia/financeiro/contas_publicas/index.php?consulta=sic" target="_blank"><img src="{{ asset('images/sic.png') }}" class="img-thumbnail m-1" style="max-width: 200px" alt="Acesso à Informação"></a></p>
+                                    <a href="http://pmpedrotoledo.geosiap.net.br/portal-transparencia/" target="_blank"><img src="{{ asset('images/transparencia.png') }}" class="img-thumbnail m-1" style="max-width: 200px" alt="Portal da Transparência"></a>
+                                    <a href="http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/issonline/iss.login.php" target="_blank"><img src="{{ asset('images/nota-fiscal.png') }}" class="img-thumbnail m-1" style="max-width: 200px" alt="Nota Fiscal Eletrônica"></a>
+                                    <a href="{{route('licitacao')}}" target="_blank"><img src="{{ asset('images/licitacoes.png') }}" class="img-thumbnail m-1" style="max-width: 200px" alt="Licitações"></a>
+                                    <a href="http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/websis/portal_transparencia/financeiro/contas_publicas/index.php?consulta=sic" target="_blank"><img src="{{ asset('images/sic.png') }}" class="img-thumbnail m-1" style="max-width: 200px" alt="Acesso à Informação"></a></p>
+                                    <a href="https://email.uolhost.com.br/pedrodetoledo.sp.gov.br/" target="_blank"><img src="{{ asset('images/webmail.png') }}" class="img-thumbnail m-1" style="max-width: 200px" alt="Webmail"></a></p>
                             </div>
                         </div>
                     </div>

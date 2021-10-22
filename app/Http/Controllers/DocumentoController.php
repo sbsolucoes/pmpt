@@ -21,7 +21,8 @@ class DocumentoController extends Controller
         $atos = Documento::where('numero', 'LIKE', "%{$request->nome}%")
             ->orWhere('assunto', 'LIKE', "%{$request->nome}%")
             ->orWhere('data', 'LIKE', "%{$request->nome}%")            
-            ->orderBy('data', 'desc')->orderBy('numero', 'DESC')
+            ->orderBy('data', 'desc')
+            ->orderBy('numero', 'DESC')
             ->Paginate(15);
 
         return view('docs.atos', compact('atos', 'filters'));

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Licitacao;
+use App\Models\DetalheLicitacao;
 
 use App\Http\Controllers\date;
 
@@ -15,13 +16,53 @@ class LicitacaoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+
+     /*
+     public function index()
     {
         $licitacao = Licitacao::where('tipoLicitacao','=', 6)
         ->orderBy(Licitacao::raw("DATE_FORMAT(dtCad,'%Y')"), 'DESC')        
         ->orderBy('numeroLicitacao', 'desc')
         ->Paginate(5);
         return view('docs.licitacao', compact('licitacao'));
+    }
+     */
+    public function index(Request $request)
+    {
+        
+        if($request){
+
+            $query=trim($request->get('tipoLic'));
+            $variavel = $request->get('label');
+            
+            /*
+            $label=$request($query){
+                if($query = '2' => 'Chamada Pública'                
+                if($query = '3' => 'Concorrência Pública'
+                if($query = '4' =>' Leilão'
+                if($query = '5' => 'Pregão Eletrônico'
+                if($query = '6' => 'Pregão Presencial'	
+                if($query = '7' => 'Tomada de Preços'
+                
+            };
+            */
+
+            $licitacao = Licitacao::where('tipoLicitacao',$query)
+            ->where('status',1)
+            ->orderBy(Licitacao::raw("DATE_FORMAT(dtCad,'%Y')"), 'DESC')        
+            ->orderBy('numeroLicitacao', 'desc')
+            ->Paginate(5);
+            return view('docs.licitacao', compact('licitacao', 'query', 'variavel'));  
+        } 
+            //return echo('A pesquisa não encontrou resultados');
+
+        $licitacao = Licitacao::where('status',1)
+        ->orderBy(Licitacao::raw("DATE_FORMAT(dtCad,'%Y')"), 'DESC')        
+        ->orderBy('numeroLicitacao', 'desc')
+        ->Paginate(5);        
+
+        return view('docs.licitacao', compact('licitacao'));
+        
     }
 
     /**
