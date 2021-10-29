@@ -12,7 +12,7 @@ class DetalheLicitacao extends Model
     /* como vc n esta trabalhando com o padrão do laravel, sempre informa com o nome da chame primaria.
     *
     * dentro da variavel $fillable, n precisa informar o id da tabela, só fazer como eu fiz*/
-    protected $table = 'licitacoes_detalhes';
+    protected $table = 'licitacao_detalhe';
     
     protected $fillable = [ 'idLicitacaoDelt',
                             'idLicitacao',
