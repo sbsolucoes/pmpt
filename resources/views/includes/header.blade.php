@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #055e9a;" >
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="{{ asset('images/logo.png') }}" style="width: 40%" class="card-img-top" alt="..."></a>
+        <a class="navbar-brand" href="#"><img src="{{ asset('images/logo.png') }}" style="width: 50%" class="card-img-top" alt="..."></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -15,7 +15,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                         <li><a class="dropdown-item" href="" target="_blank">História</a></li>
-                        <li><a class="dropdown-item" href="">Departamentos</a></li>                        
+                        <li><a class="dropdown-item" href="">Departamentos</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -48,7 +48,6 @@
                         <li><a class="dropdown-item" href="http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/websis/siapegov/recursos_humanos/grh/grh_rh_online.php">Folha de Pagamento Online</a></li>
                     </ul>
                 </li>
-                <
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Atos Oficiais
@@ -61,7 +60,7 @@
                         <li><a class="dropdown-item" href="{{ route('atos') }}" alt="Leis">Atos</a></li>
                     </ul>
                 </li>
-                
+
                 <li class="nav-item">
                     <a class="nav-link" href="{{ Storage::url('documentos/pdf/lei-organica-atualizada-2019.pdf') }}" target="_blank">Lei Orgânica</a>
                 </li>
@@ -70,16 +69,16 @@
                 </li>
 
             </ul>
-            
+
 
             <div class="form-check form-switch m-">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 20 16">
                     <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-                  </svg> 
-                <input class="form-check-input" type="checkbox" id="switch" name="theme">                
-                <label class="form-check-label" for="switch">Alto Contraste</label>                
+                  </svg>
+                <input class="form-check-input" type="checkbox" id="switch" name="theme">
+                <label class="form-check-label" for="switch">Alto Contraste</label>
             </div>
-            
+
             <div class="btn-container m-1" text-primary>
                 <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
                 <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>

@@ -16,11 +16,11 @@
                         @foreach ($noticias as $n)
                             <div class="col-sm-4">
                                 <div class="card border-0">
-                                    <img src="{{ $n->guid }}" class="card-img-top" alt="...">
+                                    <img src="{{ $n->url_file }}" class="card-img-top" alt="...">
 
                                     <div class="card-body">
                                         <p class="card-title fw-bolder text-uppercase">{{ $n->post_title }}</p>
-                                        <a href="{{ route('noticias', $n->id) }}" class="btn btn-primary">Ver</a>
+                                        <a href="{{ route('noticias', $n->id) }}" class="btn btn-primary">Mais Informações</a>
                                     </div>
                                 </div>
                             </div>
@@ -33,7 +33,7 @@
                     <div class="row ">
                         <nav class="navbar navbar-light bg-light">
                             <div class="container-fluid mt-2">
-                                
+
                                 <!--Busca-->
                                 <h4 style="background-color: #e3f2fd; width: 100%; height: 40px; ">
                                     .:Busca:.
@@ -66,7 +66,7 @@
 
                         </nav>
                     </div>
-                    
+
                     <div class="col text-left">
                         <div class="row">
                             <div class="container-fluid mt-2">
@@ -98,15 +98,15 @@
             @foreach ($comunicado as $c)
                 <div class="col" >
                     <div class="card border-0" >
-                        <img class="img-fluid img-thumbnail shadow p-0" src="{{ $c->fotoComun }}"  alt="{{ $c->com_titulo }}" />
-                        <div class="card-body"> 
+                        <img class="img-fluid img-thumbnail shadow p-0" src="{{ $c->file }}"  alt="{{ $c->com_titulo }}" />
+                        <div class="card-body">
                         </div>
                     </div>
                 </div>
             @endforeach
         </div>
-        
+
     </div>
-    
+
 @endsection
 

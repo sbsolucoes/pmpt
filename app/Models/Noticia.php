@@ -7,10 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Noticia extends Model
 {
+    protected $cms = 'https://cms.pedrodetoledo.sp.gov.br/wp-content';
     use HasFactory;
     protected $table = 'tb_posts';
     protected $primaryKey = 'id';
-    protected $fillable = [        
+    protected $fillable = [
         'post_title',
         'post_name',
         'post_content',
@@ -19,4 +20,10 @@ class Noticia extends Model
         'post_status'
     ];
     //public $timestamps = false;
+
+    public function getUrlFileAttribute(){
+        $url = explode('wp-content', $this->guid)[1];
+        return $this->cms.$url;
+    }
+
 }

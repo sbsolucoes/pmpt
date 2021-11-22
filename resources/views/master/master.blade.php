@@ -14,7 +14,7 @@
 
 </head>
 
-<body style="max-width: 1366px;">
+<body>
 
 @include('includes.header')
 
