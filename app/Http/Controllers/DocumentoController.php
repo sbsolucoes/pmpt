@@ -16,24 +16,16 @@ class DocumentoController extends Controller
     {
         $filters = $request->except('_token');
 
-        //$nome = $request->input('nome', '');
 
         $atos = Documento::where('numero', 'LIKE', "%{$request->nome}%")
             ->orWhere('assunto', 'LIKE', "%{$request->nome}%")
-            ->orWhere('data', 'LIKE', "%{$request->nome}%")            
+            ->orWhere('data', 'LIKE', "%{$request->nome}%")
             ->orderBy('data', 'desc')
             ->orderBy('numero', 'DESC')
             ->Paginate(15);
 
         return view('docs.atos', compact('atos', 'filters'));
-
-        /*
-        $atos = Documento::where('idAtos', 67)->orderBy('data', 'desc')->orderBy('numero', 'DESC')->Paginate(15);
-        return view('docs.atos', compact('atos'));
-        */
     }
-        
-    
 
     /**
      * Show the form for creating a new resource.

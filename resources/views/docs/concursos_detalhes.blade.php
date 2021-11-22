@@ -15,7 +15,7 @@
                     <div class="card">
                         <h5 class="card-header">{{ $concursos->tipoConc }} Nº {{ $concursos->numero }}</h5>
                         <div class="card-body">
-                            
+
                             <table class="table table-striped">
                                 <thead>
                             @if(isset($conc_det) && count($conc_det) > 0)
@@ -23,41 +23,41 @@
                                         <th scope="col">Titulo</th>
                                         <th scope="col">Data</th>
                                         <th scope="col"></th>
-                                        
+
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($conc_det as $down)
                                     <tr>
                                         <td>{{ $down->tituloDetalhe }}</td>
-                                        <td>{{ date('d/m/Y', strtotime($down['dtPub'])) }}</td>                                
+                                        <td>{{ date('d/m/Y', strtotime($down['dtPub'])) }}</td>
                                         <td>
-                                            
-                                            <a href="/storage/sistema/arquivos/concurso/{{$down->doc}}" stream="/storage/sistema/arquivos/concurso/{{$down->doc}}" class="btn btn-primary"  target="_blank">Abrir</a>
+
+                                            <a href="{{ $down->file }}" class="btn btn-primary"  target="_blank">Abrir</a>
                                         </td>
                                     </tr>
                                 @endforeach
                                 </tbody>
                             </table>
                         </div>
-        
+
                         <div class="d-flex justify-content-center">
-                            @endif                  
-                                
+                            @endif
+
                                 {{$conc_det->links()}}
-            
-                            
+
+
                         </div>
-                          
+
                         </div>
                     </div>
                     <br>
 
-                    
 
-                 
+
+
             </div>
         </div>
-    </div>    
+    </div>
 
 @endsection

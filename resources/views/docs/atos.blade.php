@@ -40,7 +40,7 @@
                             <td>{{ date('d/m/Y', strtotime($down['data'])) }}</td>
                             <td>{{ $down->assunto }}</td>
                             <td>
-                                <a href="{{$down->file}}" stream="{{$down->url}}"  class="btn btn-primary" target="_blank">Abrir</a>
+                                <a href="{{$down->file}}"  class="btn btn-primary" target="_blank">Abrir</a>
                             </td>
                         </tr>
                     @endforeach
@@ -50,12 +50,12 @@
             </div>
 
             <div class="d-flex justify-content-center">
-                @endif                  
+                @endif
                     @if(isset($filters))
                     {{$atos->appends($filters)->links()}}
 
                 @endif
-            </div> 
+            </div>
         </div>
     </div>
 

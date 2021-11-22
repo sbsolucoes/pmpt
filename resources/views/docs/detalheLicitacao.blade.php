@@ -16,11 +16,11 @@
                         <h5 class="card-header"> {{$licitacoes->numeroLicitacao}} </h5>
                         <div class="card-body">
                             <table class="table table-striped">
-                                <thead>                            
+                                <thead>
                                     <tr>
                                         <th scope="col">Número</th>
                                         <th scope="col">Data</th>
-                                        
+
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -29,17 +29,17 @@
                                     <tr>
                                         <td>{{ $down->tituloLicitacao }}</td>
                                         <td>{{ date('d/m/Y', strtotime($down['dtPub'])) }}</td>
-                                        
+
                                         <td>
-                                            <a href="/storage/sistema/arquivos/licitacao/{{$down->nomeArq}}" stream="/storage/sistema/arquivos/licitacao/{{$down->nomeArq}}" class="btn btn-primary"  target="_blank">Abrir</a>
+                                            <a href="{{ $down->file }}" class="btn btn-primary"  target="_blank">Abrir</a>
                                         </td>
                                     </tr>
                                 @endforeach
                                 </tbody>
-                            </table>                            
+                            </table>
                         </div>
                     </div>
-                    <br> 
+                    <br>
                 </div>
             </div>
         </div>

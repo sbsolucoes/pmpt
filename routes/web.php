@@ -53,9 +53,9 @@ Route::any('docs/licitacao', [App\Http\Controllers\LicitacaoController::class, '
 
 Route::get('docs/detalheLicitacao/{idLicitacao}', [App\Http\Controllers\DetalheLicitacaoController::class, 'index'])->name('detalheLicitacao');
 
-Route::get('docs/concursos', [App\Http\Controllers\ConcursoController::class, 'index'])->name('concursos');
+Route::get('concursos', [App\Http\Controllers\ConcursoController::class, 'index'])->name('concursos');
 
-Route::get('docs/concursos_detalhes/{id_conc}', [App\Http\Controllers\ConcursoDetalheController::class, 'show'])->name('conc_det');
+Route::get('concurso/detalhes/{id_conc}', [App\Http\Controllers\ConcursoDetalheController::class, 'show'])->name('conc_det');
 
 Route::get('docs/concursos_detalhes/{doc}', [App\Http\Controllers\ConcursoDetalheController::class, 'index'])->name('download');
 
