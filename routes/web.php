@@ -22,16 +22,9 @@ Route::get('/', [App\Http\Controllers\NoticiaController::class, 'index'])->name(
 
 Route::get('posts/show/{id}', [App\Http\Controllers\NoticiaController::class, 'show'])->name('noticias');
 
+Route::get('posts/comunicado/{idComunicados}', [App\Http\Controllers\ComunicadoController::class, 'show'])->name('comunicado');
 
-Route::get('posts/comunicado', [App\Http\Controllers\ComunicadoController::class, 'index'])->name('comunicado');
-
-//Route::get('posts/comissoes', [App\Http\Controllers\ComissoesController::class, 'index'])->name('comissoes');
-
-//Route::get('posts/camara', [App\Http\Controllers\CamaraController::class, 'index'])->name('camara');
-
-//Route::get('posts/perguntas', [App\Http\Controllers\PerguntasController::class, 'index'])->name('faq');
-
-//Route::get('posts/contato', [App\Http\Controllers\ContatoController::class, 'index'])->name('contato');
+//Route::get('posts/comunicado', [App\Http\Controllers\ComunicadoController::class, 'index'])->name('comunicado');
 
 Route::any('docs/atos', [App\Http\Controllers\DocumentoController::class, 'index'])->name('atos');
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comunicado;
 use Illuminate\Http\Request;
 
 class ComunicadoController extends Controller
@@ -43,9 +44,10 @@ class ComunicadoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($idComunicados)
     {
-        //
+        $comunicados = Comunicado::findOrFail($idComunicados);
+        return view('posts.comunicado', ['comunicados' => $comunicados]);
     }
 
     /**

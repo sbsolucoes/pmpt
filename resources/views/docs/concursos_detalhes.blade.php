@@ -4,7 +4,7 @@
 
     <div class="container-fluid">
         <div class="row float-left">
-            <div class="col-md-12">
+            <div class="col-md-12 mh-100" style="min-height: 100%;">
                 <div class="col">
                     <div class="row">
                         <div class="col-sm-12 text-dark text-center my-3">

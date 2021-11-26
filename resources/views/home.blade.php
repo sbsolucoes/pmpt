@@ -43,7 +43,7 @@
                                         <path
                                             d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                                     </svg> Pesquisar Atos e Proposituras</a>
-                                <form class="d-flex" method="post" action="#">
+                                <form class="d-flex" method="post" action="{{ route('atos') }}">
                                     @csrf
                                     <input class="form-control me-2" type="search" name="nome"
                                         placeholder="Digite a pesquisa" aria-label="Search">
@@ -88,11 +88,12 @@
         <hr class="mt-2 mb-2">
         <div class="row">
             @foreach ($comunicado as $c)
-                <div class="col" >
-                    <div class="card border-0" >
-                        <img class="img-fluid img-thumbnail shadow p-0" src="{{ $c->file }}"  alt="{{ $c->com_titulo }}" />
-                        <div class="card-body">
-                        </div>
+                <div class="col">
+                    <div class="card border-0">
+                        <a href="{{ route('comunicado', $c->idComunicados) }}">
+                            <img class="img-fluid img-thumbnail shadow p-0" src="{{ $c->file }}"  alt="{{ $c->com_titulo }}"/>
+                        </a>
+                        
                     </div>
                 </div>
             @endforeach

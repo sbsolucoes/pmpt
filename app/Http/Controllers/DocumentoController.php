@@ -22,7 +22,7 @@ class DocumentoController extends Controller
             ->orWhere('data', 'LIKE', "%{$request->nome}%")
             ->orderBy('data', 'desc')
             ->orderBy('numero', 'DESC')
-            ->Paginate(15);
+            ->Paginate(20);
 
         return view('docs.atos', compact('atos', 'filters'));
     }
