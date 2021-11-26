@@ -24,8 +24,8 @@
                                 .:Link Úteis:.
                             </h4>
                             <li class="nav-item text-black">
-                                <a class="nav-link" aria-current="page" href="https://pedrodetoledo.sp.gov.br/"
-                                    target="_blank">Prefeitura de Pedro de Toledo</a>
+                                <a class="nav-link" aria-current="page" href="https://www.camaradepedrodetoledo.sp.gov.br/"
+                                    target="_blank">Câmara Municipal de Pedro de Toledo</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="https://www.al.sp.gov.br/" target="_blank">Assembleia
