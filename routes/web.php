@@ -24,7 +24,7 @@ Route::get('posts/show/{id}', [App\Http\Controllers\NoticiaController::class, 's
 
 Route::get('posts/comunicado/{idComunicados}', [App\Http\Controllers\ComunicadoController::class, 'show'])->name('comunicado');
 
-//Route::get('posts/comunicado', [App\Http\Controllers\ComunicadoController::class, 'index'])->name('comunicado');
+Route::get('posts/departamentos', [App\Http\Controllers\DepartamentoController::class, 'index'])->name('departamentos');
 
 Route::any('docs/atos', [App\Http\Controllers\DocumentoController::class, 'index'])->name('atos');
 

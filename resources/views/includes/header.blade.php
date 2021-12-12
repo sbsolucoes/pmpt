@@ -14,8 +14,8 @@
                         A Prefeitura
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="" target="_blank">História</a></li>
-                        <li><a class="dropdown-item" href="">Departamentos</a></li>
+                        
+                        <li><a class="dropdown-item" href="{{ route('departamentos') }}">Departamentos</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">

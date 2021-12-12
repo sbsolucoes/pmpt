@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Departamento;
+use App\Models\Diretor;
 use Illuminate\Http\Request;
 
 class DepartamentoController extends Controller
@@ -14,7 +15,13 @@ class DepartamentoController extends Controller
      */
     public function index()
     {
-        //
+        $departamento = Departamento::where('status', 1)->orderBy('nomeDepto', 'Asc')->with(['diretor'])->get();
+        
+        //dd($departamento);
+   
+
+        return view('posts.departamentos', compact('departamento'));
+       
     }
 
     /**
