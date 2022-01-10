@@ -24,11 +24,11 @@
                         <tbody>
                         @foreach($educacao as $down)
                             <tr>
-                                <td>{{ $down->dtpub }}</td>
+                                <td>{{ date('d/m/Y', strtotime($down['dtpub'])) }}</td>
                                 <td> {!! html_entity_decode($down->deltDoc) !!}</td>  
                                                              
                                 <td>
-                                    <a href="{{$down->file}}" stream="legislativo/{{$down->url}}"  class="btn btn-primary" target="_blank">Abrir</a>
+                                    <a href="{{$down->file}}" stream="../legislativo/{{$down->url}}"  class="btn btn-primary" target="_blank">Abrir</a>
                                 </td>
                             </tr>
                         @endforeach
