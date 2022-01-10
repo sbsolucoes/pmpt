@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\educacao;
 use Illuminate\Http\Request;
 
 class EducacaoController extends Controller
@@ -13,7 +14,8 @@ class EducacaoController extends Controller
      */
     public function index()
     {
-        //
+        $educacao = educacao::where('status','=', 1)->orderBy('dtpub', 'Desc')->Paginate(15);
+        return view('docs.educacao', compact('educacao'));
     }
 
     /**

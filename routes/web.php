@@ -34,7 +34,7 @@ Route::get('docs/lc', [App\Http\Controllers\LeiComplementarController::class, 'i
 
 Route::get('doc/decretos', [App\Http\Controllers\DecretoController::class, 'index'])->name('decretos');
 
-//Route::get('atos/edital', [App\Http\Controllers\EditalController::class, 'index'])->name('edital');
+Route::get('docs/educacao', [App\Http\Controllers\EducacaoController::class, 'index'])->name('educacao');
 
 Route::get('docs/portarias', [App\Http\Controllers\PortariaController::class, 'index'])->name('portarias');
 
