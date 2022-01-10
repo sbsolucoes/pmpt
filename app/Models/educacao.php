@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class educacao extends Model
 {
-    //protected $legislativo = "https://legislativo.pedrodetoledo.sp.gov.br/";
+    protected $legislativo = "https://legislativo.pedrodetoledo.sp.gov.br/";
 
     protected $table = 'educacao';
     protected $primaryKey = 'idEdu';
@@ -20,6 +20,6 @@ class educacao extends Model
 
     //mutators
     public function getFileAttribute(){
-        //return $this->legislativo.$this->url;
+        return $this->legislativo.$this->url;
     }
 }
