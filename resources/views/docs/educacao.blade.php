@@ -28,7 +28,7 @@
                                 <td> {!! html_entity_decode($down->deltDoc) !!}</td>  
                                                              
                                 <td>
-                                    <a href="{{$down->file}}" stream="../legislativo/{{$down->url}}"  class="btn btn-primary" target="_blank">Abrir</a>
+                                    <a href="{{$down->file}}" stream="../../legislativo/{{$down->url}}"  class="btn btn-primary" target="_blank">Abrir</a>
                                 </td>
                             </tr>
                         @endforeach
