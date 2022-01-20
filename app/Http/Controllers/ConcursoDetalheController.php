@@ -51,7 +51,7 @@ class ConcursoDetalheController extends Controller
      */
     public function show($concurso){
         $concursos = Concurso::findOrFail($concurso);
-        $conc_det = ConcursoDetalhe::where('id_conc', $concurso)->orderBy('dtPub', 'desc')->paginate(15);
+        $conc_det = ConcursoDetalhe::where('id_conc', $concurso)->orderBy('dtPub', 'desc')->orderBy('idConcdetalhe', 'desc')->paginate(15);
         return view('docs.concursos_detalhes', compact('conc_det','concursos'));
     }
 

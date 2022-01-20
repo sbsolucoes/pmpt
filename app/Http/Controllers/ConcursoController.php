@@ -22,7 +22,7 @@ class ConcursoController extends Controller
     {
         //$concurso = Concurso::where('tipoConc', 'Concurso')->where('exibir', 1)->paginate(15);
 
-        $concurso = Concurso::where('exibir', 1)->orderBy('data_Pub', 'desc')->orderBy('idConcdetalhe', 'desc')->paginate(15);
+        $concurso = Concurso::where('exibir', 1)->orderBy('data_Pub', 'desc')->paginate(15);
 
         //dd($concurso);
 
