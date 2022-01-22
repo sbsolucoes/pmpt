@@ -16,7 +16,7 @@ class NoticiaController extends Controller
     public function index()
     {
         $noticias = Noticia::where('post_status', 1)->orderBy('id', 'desc')->get()->take(6);
-        $comunicado = Comunicado::orderBy('idComunicados', 'desc')->get()->take(3);
+        $comunicado = Comunicado::where('exibir', 1)->orderBy('idComunicados', 'desc')->get()->take(3);
 
         return view('home', compact('noticias','comunicado'));        
     
