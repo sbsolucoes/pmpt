@@ -65,6 +65,9 @@
                     <a class="nav-link" href="https://legislativo.pedrodetoledo.sp.gov.br/pdf/lei-organica-atualizada-2019.pdf" target="_blank">Lei Orgânica</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{{ route('contato') }}">Contato</a></a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="https://mailpro.uol.com.br/pedrodetoledo.sp.gov.br" target="_blank">Webmail</a>
                 </li>
 
