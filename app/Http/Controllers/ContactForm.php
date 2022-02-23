@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Mail;
 use App\Mail\SendMail;
-//use App\Models\Contato;
+use App\Models\Contato;
 
 class ContactForm extends Controller
 {
@@ -21,7 +21,7 @@ class ContactForm extends Controller
     }
 
     public function sendMail()
-    {  
+    {
         $data = array(
             'nome' => $this->nome,
             'email' => $this->email,

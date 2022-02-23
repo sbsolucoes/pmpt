@@ -22,7 +22,7 @@ Route::get('/', function () {
 
 Route::get('/', [App\Http\Controllers\NoticiaController::class, 'index'])->name('home');
 
-Route::any('contact/contato', [App\Http\Controllers\ContactController::class, 'index'])->name('contato');
+Route::any('contact/ouvidoria', [App\Http\Controllers\ContactController::class, 'index'])->name('contato');
 
 Route::get('posts/show/{id}', [App\Http\Controllers\NoticiaController::class, 'show'])->name('noticias');
 

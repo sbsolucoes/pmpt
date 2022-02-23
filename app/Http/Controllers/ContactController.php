@@ -16,7 +16,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        return view('contact.contato');
+        return view('contact.ouvidoria');
     }
 
     /**
@@ -49,7 +49,7 @@ class ContactController extends Controller
         try {
             $contato->sendMail();
             $contato->saveMail();
-            
+
             return back()
                 ->with('success', 'Obrigado por nos contactar');
         } catch (\Exception $error) {
