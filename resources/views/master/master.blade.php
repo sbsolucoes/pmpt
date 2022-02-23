@@ -13,6 +13,17 @@
     <link rel="stylesheet" href="{{ asset('css/estilo_basico.css') }}">
 
 
+
+    <!-- Contrast pasta resource css-->
+    <link rel="alternate stylesheet" href="css/escuro.css" title="2">
+    <link rel="alternate stylesheet" href="css/claro.css" title="1">
+
+
+
+
+
+
+
 </head>
 
 <body>
@@ -61,6 +72,10 @@
 </script>
 <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+
+<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="css/alterar.js"></script>
 
 </body>
 

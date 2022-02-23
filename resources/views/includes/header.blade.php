@@ -14,18 +14,18 @@
                         A Prefeitura
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        
+
                         <li><a class="dropdown-item" href="{{ route('departamentos') }}">Departamentos</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{route('concursos')}}">Concursos</a>
+                    <a class="nav-link active" aria-current="page" href="{{route('concursos')}}">Concursos e Processos Seletivos</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle " href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Educação
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">                        
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                         <li><a class="dropdown-item" href="{{ route('educacao') }}">Editais</a></li>
                         <li><a class="dropdown-item" href="{{ route('escolas') }}">Escolas</a></li>
                         <li><a class="dropdown-item" href="https://pedrodetoledo.sapescola.com.br/" target="_blank">SAPESCOLA</a></li>
@@ -61,7 +61,7 @@
                         <li><a class="dropdown-item" href="{{ route('atos') }}" alt="Leis">Atos</a></li>
                     </ul>
                 </li>
-                
+
                 <li class="nav-item">
                     <a class="nav-link" href="#">Ouvidoria</a>
                 </li>
@@ -70,14 +70,14 @@
                 </li>
 
             </ul>
-
+            <button id="click">Contraste</button>
 
             <div class="form-check form-switch m-">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 20 16">
                     <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-                  </svg> 
-                <input class="form-check-input" type="checkbox" id="switch" name="theme">                
-                <label class="form-check-label" for="switch">Alto Contraste</label>                
+                  </svg>
+                <input class="form-check-input" type="checkbox" id="switch" name="theme">
+                <label class="form-check-label" for="switch">Alto Contraste</label>
             </div>
 
             <div class="btn-container m-1" text-primary>
