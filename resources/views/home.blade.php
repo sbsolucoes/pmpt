@@ -75,10 +75,10 @@
                                     <a href="{{route('licitacao')}}" target="_blank"><img src="{{ asset('images/licitacoes.png') }}" class="img-thumbnail m-1" style="max-width: 200px" alt="Licitações"></a>
                                     <a href="http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/websis/portal_transparencia/financeiro/contas_publicas/index.php?consulta=sic" target="_blank"><img src="{{ asset('images/sic.png') }}" class="img-thumbnail m-1" style="max-width: 200px" alt="Acesso à Informação"></a></p>
                                     <a href="https://email.uolhost.com.br/pedrodetoledo.sp.gov.br/" target="_blank"><img src="{{ asset('images/webmail.png') }}" class="img-thumbnail m-1" style="max-width: 200px" alt="Webmail"></a></p>
-                                    <a href="{{ route('concursos') }}" target="_blank"><img src="{{ asset('images/concursos.jpg') }}" class="img-thumbnail m-1" style="max-width: 200px" alt="Concursos e Processos Seletivos"></a></p>
-                                    <a href="https://cms.pedrodetoledo.sp.gov.br/doc-diversos/Carta-de-Servicos-ao-Usuario.pdf/" target="_blank"><img src="{{ asset('images/carta.jpg') }}" class="img-thumbnail m-1" style="max-width: 200px" alt="Carta de Serviços ao Usuário"></a></p>
+                                    <a href="{{ route('concursos') }}"><img src="{{ asset('images/concursos.jpg') }}" class="img-thumbnail m-1" style="max-width: 200px" alt="Concursos e Processos Seletivos"></a></p>
+                                    <a href="https://legislativo.pedrodetoledo.sp.gov.br/pdf/doc-diversos/Carta-de-Servicos-ao-Usuario.pdf/" target="_blank"><img src="{{ asset('images/carta.jpg') }}" class="img-thumbnail m-1" style="max-width: 200px" alt="Carta de Serviços ao Usuário"></a></p>
                                     <a href="https://www.poupatempo.sp.gov.br/wps/portal/portalpoupatempo/servicos/intermediarias/carteira-vacina-covid19/!ut/p/z1/lZFNb4JAEIZ_Sw8cywwsIdjbGhSQlpXiB92LAUNXEmQNUkn_fTd6IkGq720nzzOZvAscUuB1dilF1payzir1_uL2LqQu-tMEGUbhFOOIJpv15wQdw4LtFYh81_QtDxljBDGeEBtJsEEV4E_5zmzuYhwsQjeaGabHrCd9b25Q5a9MknwsCXu3H_PxTuiD948AfHz9FvgVGWuwDwxU1AcGOvjvigVwUcn89uG0zokjgDfFd9EUjf7TqPGhbU_nNw017LpOF1KKqtD38qjhkHKQ5xbSPgmn41olxTJ45flv9_IH8rI7UA!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/" target="_blank"><img src="{{ asset('images/cert-covid.jpg') }}" class="img-thumbnail m-1" style="max-width: 200px" alt="Webmail"></a></p>
-                                       
+                                </p>       
                             </div>
                         </div>
                     </div>
