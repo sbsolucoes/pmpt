@@ -1,0 +1,85 @@
+.contrast,
+.contrast nav,
+.contrast ol,
+.contrast ul,
+/*.contrast div,*/
+.contrast header,
+.contrast footer,
+.contrast main,
+.contrast aside,
+.contrast article {
+    background: black !important;
+    color: white !important;
+}
+.contrast .box,
+/*.contrast p,*/
+.contrast label,
+.contrast strong,
+.contrast em,
+.contrast cite,
+.contrast q,
+.contrast i,
+.contrast p,
+.contrast u,
+.contrast span {
+    color: white !important;
+}
+.contrast a{
+    color: rgb(255, 255, 255) !important;
+}
+.contrast .box{
+	background-color: black;
+}
+.contrast .format{
+	color: white !important;
+}
+.contrast .constrat-p{
+	color: black !important;
+}
+.contrast .pagination .pagination-sm li a{
+	color: black !important;
+}
+
+.contrast h2,
+.contrast h3,
+.contrast h4,
+.contrast h5,
+.contrast h6{
+	color: black;
+}
+.contrast h1{
+	color:white;
+}
+
+.contrast button,
+.contrast input[type=button],
+.contrast input[type=reset],
+.contrast input[type=submit] {
+    background: black !important;
+    color: yellow !important;
+    border: none !important;
+}
+/*.contrast img.on-contrast-force-gray {
+    filter: grayscale(100%) contrast(120%);
+}*/
+
+/*.contrast img.on-contrast-force-white {
+    filter: brightness(0) invert(1);
+}*/
+.contrast input[type=text],
+.contrast input[type=password],
+.contrast input[type=url],
+.contrast input[type=search],
+.contrast input[type=email],
+.contrast input[type=tel],
+.contrast input[type=date],
+.contrast input[type=month],
+.contrast input[type=week],
+.contrast input[type=datetime],
+.contrast input[type=datetime-local],
+.contrast textarea,
+.contrast input[type=number] {
+    background: black !important;
+    border: 1px solid white !important;
+    color: white !important;
+}

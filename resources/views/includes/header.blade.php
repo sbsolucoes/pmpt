@@ -53,7 +53,7 @@
                         Atos Oficiais
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="nav-link" href="https://legislativo.pedrodetoledo.sp.gov.br/pdf/lei-organica-atualizada-2019.pdf" target="_blank">Lei Orgânica</a></li>
+                        <li><a class="dropdown-item" href="https://legislativo.pedrodetoledo.sp.gov.br/pdf/lei-organica-atualizada-2019.pdf" target="_blank">Lei Orgânica</a></li>
                         <li><a class="dropdown-item" href="{{ route('leis') }}" alt="Leis">Leis</a></li>
                         <li><a class="dropdown-item" href="{{ route('lc') }}" alt="Leis Complementares">Leis Complementares</a></li>
                         <li><a class="dropdown-item" href="{{ route('decretos') }}" alt="Decretos">Decretos</a></li>
