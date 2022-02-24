@@ -12,7 +12,7 @@
                             <hr class="mt-2 mb-2">
                         </div>
                     </div>
-                    <table class="table table-striped">
+                    <table class="table table-striped text-dark">
                         <thead>
                     @if(isset($educacao) && count($educacao) > 0)
                             <tr>
@@ -25,8 +25,8 @@
                         @foreach($educacao as $down)
                             <tr>
                                 <td>{{ date('d/m/Y', strtotime($down['dtpub'])) }}</td>
-                                <td> {!! html_entity_decode($down->deltDoc) !!}</td>  
-                                                             
+                                <td> {!! html_entity_decode($down->deltDoc) !!}</td>
+
                                 <td>
                                     <a href="{{$down->file}}" stream="{{$down->url}}"  class="btn btn-primary" target="_blank">Abrir</a>
                                 </td>
@@ -37,16 +37,16 @@
                 </div>
 
                 <div class="d-flex justify-content-center">
-                    @endif                  
-                        
+                    @endif
+
                         {{$educacao->links()}}
-    
-                    
+
+
                 </div>
 
-                 
+
             </div>
         </div>
-    </div>    
+    </div>
 
 @endsection

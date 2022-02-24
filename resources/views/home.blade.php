@@ -6,7 +6,7 @@
         <div class="row float-left">
             <div class="col-md-8">
                 <div class="col">
-                    <div class="row">
+                    <div class="row text-dark">
                         <div class="col-sm-12 text-dark text-center my-3">
                             <h1>Notícias</h1>
                             <hr class="mt-2 mb-2">
@@ -32,7 +32,7 @@
                 <div class="col-md-4 float-right">
                     <div class="row ">
                         <nav class="navbar navbar-light bg-light">
-                            <div class="container-fluid mt-2">
+                            <div class="container-fluid mt-2 text-dark">
 
                                 <!--Busca-->
                                 <h4 style="background-color: #e3f2fd; width: 100%; height: 40px; ">
@@ -61,7 +61,7 @@
 
                     <div class="col text-left">
                         <div class="row">
-                            <div class="container-fluid mt-2">
+                            <div class="container-fluid mt-2 text-dark">
                                 <!--Links Úteis-->
                                 <hr class="mt-2 mb-2">
                                 <h4 style="background-color: #e3f2fd; width: 100%; height: 40px; ">.:Acesso Rápido:.</h4>
