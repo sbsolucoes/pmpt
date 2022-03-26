@@ -20,6 +20,7 @@ class DocumentoController extends Controller
         $atos = Documento::where('numero', 'LIKE', "%{$request->nome}%")
             ->orWhere('assunto', 'LIKE', "%{$request->nome}%")
             ->orWhere('data', 'LIKE', "%{$request->nome}%")
+            ->orwhere('status', 1)
             ->orderBy('data', 'desc')
             ->orderBy('numero', 'DESC')
             ->Paginate(20);

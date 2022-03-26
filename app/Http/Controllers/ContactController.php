@@ -16,7 +16,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        return view('contact.ouvidoria');
+        return view('contact.contato');
     }
 
     /**
@@ -37,6 +37,7 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
+        
         $request->validate([
             'nome' => 'required',
             'email' => 'required|email',
