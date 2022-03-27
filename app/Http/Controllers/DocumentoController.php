@@ -16,11 +16,9 @@ class DocumentoController extends Controller
     {
         $filters = $request->except('_token');
 
-
-        $atos = Documento::where('numero', 'LIKE', "%{$request->nome}%")
-            ->orWhere('assunto', 'LIKE', "%{$request->nome}%")
+        $atos = Documento::where('status', 1)->where('assunto', 'LIKE', "%{$request->nome}%")
+            ->orwhere('numero', 'LIKE', "%{$request->nome}%")
             ->orWhere('data', 'LIKE', "%{$request->nome}%")
-            ->orwhere('status', 1)
             ->orderBy('data', 'desc')
             ->orderBy('numero', 'DESC')
             ->Paginate(20);

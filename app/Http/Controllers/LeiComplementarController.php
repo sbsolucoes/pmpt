@@ -14,7 +14,7 @@ class LeiComplementarController extends Controller
      */
     public function index()
     {
-        $lc = Documento::where('tipo_doc', 68)->orderBy('data', 'desc')->orderBy('numero', 'DESC')->paginate(15);
+        $lc = Documento::where('tipo_doc', 68)->where('status','=', 1)->orderBy('data', 'desc')->orderBy('numero', 'DESC')->paginate(15);
         return view('docs.lc', compact('lc'));
     }
 
