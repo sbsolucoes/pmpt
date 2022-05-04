@@ -33,7 +33,7 @@
                                         <td>{{ date('d/m/Y', strtotime($down['dtPub'])) }}</td>
                                         <td>
 
-                                            <a href="{{ $down->file }}" class="btn btn-primary"  target="_blank">Abrir</a>
+                                            <a href="{{ $down->file }}" stream="{{$down->doc}}" class="btn btn-primary"  target="_blank">Abrir</a>
                                         </td>
                                     </tr>
                                 @endforeach
