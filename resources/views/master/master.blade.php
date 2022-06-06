@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <title>Prefeitura Municipal de Pedro de Toledo</title>
+    <title>Prefeitura de Pedro de Toledo</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">

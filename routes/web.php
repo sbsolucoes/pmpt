@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 /*
 Route::get('/', function () {
-    return view('welcome');
+    return view('');
 });
 */
 
@@ -54,6 +54,8 @@ Route::get('concursos', [App\Http\Controllers\ConcursoController::class, 'index'
 
 Route::get('concurso/detalhes/{id_conc}', [App\Http\Controllers\ConcursoDetalheController::class, 'show'])->name('conc_det');
 
-Route::get('docs/concursos_detalhes/{doc}', [App\Http\Controllers\ConcursoDetalheController::class, 'index'])->name('download');
+//Route::get('docs/concursos_detalhes/{doc}', [App\Http\Controllers\ConcursoDetalheController::class, 'index'])->name('download');
+
+Route::get('/{idConcdetalhe}', [App\Http\Controllers\ConcursoDetalheController::class, 'show'])->name('downloadfile');
 
 //Route::get('posts/perguntas', [App\Http\Controllers\PerguntasController::class, 'index'])->name('faq');

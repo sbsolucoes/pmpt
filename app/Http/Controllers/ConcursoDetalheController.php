@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ConcursoDetalhe;
 use App\Models\Concurso;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ConcursoDetalheController extends Controller
 {
@@ -52,7 +53,9 @@ class ConcursoDetalheController extends Controller
     public function show($concurso){
         $concursos = Concurso::findOrFail($concurso);
         $conc_det = ConcursoDetalhe::where('id_conc', $concurso)->orderBy('dtPub', 'desc')->orderBy('idConcdetalhe', 'desc')->paginate(15);
+        
         return view('docs.concursos_detalhes', compact('conc_det','concursos'));
+        
     }
 
     /**
