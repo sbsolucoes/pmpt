@@ -33,7 +33,7 @@
                                         <td>{{ date('d/m/Y', strtotime($down['dtPub'])) }}</td>
                                         <td>
                                             <a href="{{$down->doc}}" download="{{$down->doc}}"  class="btn btn-primary" target="_blank">Abrir</a>
-                                            <!--<a href="{{ route('downloadfile',  $down->doc) }}" class="btn btn-primary"  target="_blank">Baixar</a>-->
+                                            
                                         </td>
                                     </tr>
                                 @endforeach
