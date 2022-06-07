@@ -26,7 +26,7 @@
                         Educação
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="{{ route('educacao') }}">Editais</a></li>
+                        <li><a class="dropdown-item" href="{{ route('educacao') }}">Editais de Atribuição</a></li>
                         <li><a class="dropdown-item" href="{{ route('escolas') }}">Escolas</a></li>
                         <li><a class="dropdown-item" href="https://pedrodetoledo.sapescola.com.br/" target="_blank">SAPESCOLA</a></li>
 
