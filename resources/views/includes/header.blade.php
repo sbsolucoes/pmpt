@@ -46,7 +46,7 @@
                         <li><a class="dropdown-item" href="http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/websis/siapegov/arrecadacao/2via/index.php">Emissão de 2ª vias de Tributos e Taxas</a></li>
                         <li><a class="dropdown-item" href="http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/websis/siapegov/arrecadacao/itbi/itbi_login.php">Emissão de Guia de ITB</a></li>
                         <li><a class="dropdown-item" href="http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/websis/siapegov/recursos_humanos/grh/grh_rh_online.php">Folha de Pagamento Online</a></li>
-                        <li><a class="dropdown-item" href="http://legislativo.pedrodetoledo.sp.gov.br/pdf/modelo-de-declaracao-de-bens-e-valores.doc">Declaração Anual de Bens - Editável</a></li>
+                        <li><a class="dropdown-item" href="http://legislativo.pedrodetoledo.sp.gov.br/pdf/modelo-de-declaracao-de-bens-e-valores.doc">Declaração Anual de Bens - Editável (Utilizar Edge ou Firefox)</a></li>
                         <li><a class="dropdown-item" href="http://legislativo.pedrodetoledo.sp.gov.br/pdf/modelo-de-declaracao-de-bens-e-valores.pdf">Declaração Anual de Bens - PDF</a></li>
 
                     </ul>
