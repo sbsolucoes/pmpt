@@ -3,6 +3,7 @@
 return [
 
     'licitacao' => [
+        "1" => "Carta Convite",
         "2" => "Chamada Pública",
         "3" => "Concorrência Pública",
         "4" => "Leilão",

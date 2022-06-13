@@ -5,7 +5,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 mh-100">
-                <div class="col">
+                <div class="col"> 
                     <div class="row">
                         <div class="col-sm-12 text-dark text-center my-3">
                             <h1>Licitação</h1>
