@@ -18,7 +18,7 @@
                             <p>Confira os Detalhes no Qr Code abaixo</p>
                             <p>    </p> -->
                             <a href="" target="_blank"><img src="{{ asset('images/solidario.png') }}" class="img-thumbnail m-1" style="max-width: 800px" alt="Arraiá Solidário"></a>
-                            <img src="{{ $n->url_file }}" class="card-img-top" alt="{{ $n->post_title }}">
+                            
 
                             <hr class="mt-2 mb-2">
                         </div>
