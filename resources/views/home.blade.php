@@ -8,7 +8,18 @@
                 <div class="col">
                     <div class="row text-dark">
                         <div class="col-sm-12 text-dark text-center my-3">
-                            <h1>Notícias</h1>
+                           <!-- <h1>Arraiá Solidário 2022</h1><br>
+                            <h2>Prêmio especial de 10.000 reais</h2><br>
+                            <p>Dias 16, 17, 18 e 19/06/2022</p>
+                            <p>Das 20:00 às 00:00</p>
+                            <p>Realização Fundo Social da Prefeitura Municipal de Pedro de Toledo</p> 
+                            <p>Entidades participantes</p>
+                            <p>APAE - CCI - Escolas Municipais - Esporte, Turismo e Cultura.</p><br>
+                            <p>Confira os Detalhes no Qr Code abaixo</p>
+                            <p>    </p> -->
+                            <a href="" target="_blank"><img src="{{ asset('images/solidario.png') }}" class="img-thumbnail m-1" style="max-width: 800px" alt="Arraiá Solidário"></a>
+                            <img src="{{ $n->url_file }}" class="card-img-top" alt="{{ $n->post_title }}">
+
                             <hr class="mt-2 mb-2">
                         </div>
                     </div>
