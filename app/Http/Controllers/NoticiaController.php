@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Comunicado;
 use App\Models\Noticia;
+use App\Models\PostGalery;
 use Illuminate\Http\Request;
 
 class NoticiaController extends Controller
@@ -18,8 +19,8 @@ class NoticiaController extends Controller
         $noticias = Noticia::where('post_status', 1)->orderBy('id', 'desc')->get()->take(3);
         $comunicado = Comunicado::where('exibir', 1)->orderBy('idComunicados', 'desc')->get()->take(3);
 
-        return view('home', compact('noticias','comunicado'));        
-    
+        return view('home', compact('noticias','comunicado'));
+
     }
 
     /**
@@ -44,15 +45,17 @@ class NoticiaController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Noticia  $noticia
-     * @return \Illuminate\Http\Response
+     * @param int $id
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function show( $id)
+    public function show(int $id)
     {
         $noticias = Noticia::findOrFail($id);
-        return view('posts.show', ['noticias' => $noticias]);
+        $galerias = PostGalery::where('post_id', $id)->get();
+        return view('posts.show', [
+            'noticias' => $noticias,
+            'galerias' => $galerias
+        ]);
 
     }
 

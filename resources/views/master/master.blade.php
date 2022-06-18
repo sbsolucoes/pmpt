@@ -62,12 +62,10 @@
         });
     }
 </script>
-<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-<script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
-
-
-<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
-    <script type="text/javascript" src="css/alterar.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="{{ asset('css/alterar.js') }}"></script>
 
 </body>
 
