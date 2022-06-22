@@ -12,7 +12,7 @@
 
             @if($galerias->isNotEmpty())
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                         <div class="container">
                             <h3 class="text-uppercase">Galeria de fotos</h3>
                             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="width: 100%; max-height: 600px">
