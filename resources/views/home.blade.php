@@ -6,6 +6,9 @@
         <div class="row float-left">
             <div class="col-md-8">
                 <div class="col">
+                    <hr class="mt-2 mb-2">
+                        <h2 class="font-weight-light text-center text-lg-left mt-2 mb-1"></h2>
+                        <hr class="mt-2 mb-2">
                     <div class="row g-5">
                         @foreach ($noticias as $n)
                             <div class="col-sm-4">

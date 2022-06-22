@@ -7,10 +7,11 @@
             <div class="col-md-8">
                 <div class="col">
                     <hr class="mt-2 mb-2">
-        <h2 class="font-weight-light text-center text-lg-left mt-2 mb-1">Hotéis e Pousadas</h2>
+                    @foreach ($hospedaria as $h)
+        <h2 class="font-weight-light text-center text-lg-left mt-2 mb-1">{{ $h->tipo }}</h2>
         <hr class="mt-2 mb-2">
                     <div class="row g-5">
-                        @foreach ($hospedaria as $h)
+                       
                             <div class="col-sm-4">
                                 <div class="card border-1">
                                     <img src="{{ url('storage/sistema/turismo/images/'.$h->foto) }}" class="card-img-top" alt="{{ $h->nome }}">                                   

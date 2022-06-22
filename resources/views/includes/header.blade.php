@@ -19,12 +19,10 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{route('concursos')}}">Concursos e Processos Seletivos</a>
+                    <a class="nav-link active" aria-current="page" href="{{route('concursos')}}">Concursos e Proc. Seletivos</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle " href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Educação
-                    </a>
+                    <a class="nav-link dropdown-toggle " href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Educação</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                         <li><a class="dropdown-item" href="{{ route('educacao') }}">Editais</a></li>
                         <li><a class="dropdown-item" href="{{ route('escolas') }}">Escolas</a></li>
@@ -72,8 +70,20 @@
                 <li class="nav-item">
                     <a class="nav-link" href="https://mailpro.uol.com.br/pedrodetoledo.sp.gov.br" target="_blank">Webmail</a>
                 </li>
-
+                <!--
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle " href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Turismo</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li><a class="dropdown-item" href="{{ route('hospedaria') }}">Hoteis e Pousadas</a></li>
+                        
+    
+                    </ul>
+                </li>
+                -->
             </ul>
+
+            
+
             <button id="click">Contraste</button>
 
             <!--

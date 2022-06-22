@@ -30,6 +30,10 @@ Route::get('posts/comunicado/{idComunicados}', [App\Http\Controllers\ComunicadoC
 
 Route::get('posts/departamentos', [App\Http\Controllers\DepartamentoController::class, 'index'])->name('departamentos');
 
+Route::get('posts/hospedaria', [App\Http\Controllers\HospedariaController::class, 'index'])->name('hospedaria');
+
+
+
 Route::any('docs/atos', [App\Http\Controllers\DocumentoController::class, 'index'])->name('atos');
 
 Route::get('docs/leis', [App\Http\Controllers\LeiController::class, 'index'])->name('leis');
