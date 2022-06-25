@@ -1,8 +1,8 @@
-<div class="panel panel-primary p-3" style="background-color: #043556;">
+<div class="panel panel-primary p-3 mt-5" style="left: 0;bottom: 0;width: 100%;background-color: #043556;">
     <div class="row">
         <div class="col-sm-3 text-center">
             <h4 class="text-white">Localização</h4>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14548.20504686613!2d-47.231727!3d-24.27494!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x17c665447299aecd!2sPrefeitura%20Municipal%20de%20Pedro%20de%20Toledo!5e0!3m2!1spt-BR!2sbr!4v1629392933277!5m2!1spt-BR!2sbr" width="320" height="240" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14548.20504686613!2d-47.231727!3d-24.27494!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x17c665447299aecd!2sPrefeitura%20Municipal%20de%20Pedro%20de%20Toledo!5e0!3m2!1spt-BR!2sbr!4v1629392933277!5m2!1spt-BR!2sbr" width="320" height="240" style="border:0;border-radius: 5px" allowfullscreen="" loading="lazy"></iframe>
 
         </div>
         <div class="col-sm-6 text-center m-0">
@@ -14,28 +14,26 @@
         <div class="col-sm-3 text-left">
 
             <div class="row">
-                <div class="container-fluid mt-2">
+                <div class="container-fluid">
                     <!--Links Úteis-->
-                    <hr class="mt-2 mb-2">
+                    <h4 class="text-white">Link Úteis</h4>
                     <nav class="navbar navbar-dark">
 
                         <ul class="nav flex-column">
-                            <h4 class="text-white">
-                                .:Link Úteis:.
-                            </h4>
-                            <li class="nav-item text-black">
-                                <a class="nav-link" aria-current="page" href="https://camaradepedrodetoledo.sp.gov.br/"
+
+                            <li class="nav-item">
+                                <a class="nav-link text-white" aria-current="page" href="https://camaradepedrodetoledo.sp.gov.br/"
                                     target="_blank">Câmara Municipal de Pedro de Toledo</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="https://www.al.sp.gov.br/" target="_blank">Assembleia
+                                <a class="nav-link text-white" href="https://www.al.sp.gov.br/" target="_blank">Assembleia
                                     Legislativa</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="https://www.camara.leg.br/" target="_blank">Câmara Federal</a>
+                                <a class="nav-link text-white" href="https://www.camara.leg.br/" target="_blank">Câmara Federal</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="https://www12.senado.leg.br/hpsenado" target="_blank">Senado
+                                <a class="nav-link text-white" href="https://www12.senado.leg.br/hpsenado" target="_blank">Senado
                                     Federal</a>
                             </li>
                         </ul>

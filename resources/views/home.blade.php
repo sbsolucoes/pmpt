@@ -27,14 +27,16 @@
             </div>
 
                 <div class="col-md-4 float-right">
-                    <div class="row ">
+                    <div class="row mt-5">
+                        <h4 style="background-color: #e3f2fd; width: 100%; padding: 5px;font-size: 20px; color: #000000; border-radius: 5px">
+                            Busca
+                        </h4>
                         <nav class="navbar navbar-light bg-light">
+
                             <div class="container-fluid mt-2 text-dark">
 
                                 <!--Busca-->
-                                <h4 style="background-color: #e3f2fd; width: 100%; height: 40px; ">
-                                    .:Busca:.
-                                </h4>
+
                                 <a class="navbar-brand"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
                                         fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                         <path
@@ -50,10 +52,6 @@
                             </div>
 
                         </nav>
-                        <nav class="navbar navbar-light">
-
-
-                        </nav>
                     </div>
 
                     <div class="col text-left">
@@ -61,11 +59,8 @@
                             <div class="container-fluid mt-2 text-dark">
                                 <!--Links Úteis-->
                                 <hr class="mt-2 mb-2">
-                                <h4 style="background-color: #e3f2fd; width: 100%; height: 40px; ">.:Acesso Rápido:.</h4>
-                                <a href="#" class="nav-link text-decoration-none">Perguntas
-                                    Frequentes</a>
-                                <p class="text-white"></p>
-                                <p class="text-white"></p>
+                                <h4 style="background-color: #e3f2fd;width: 100%;padding: 5px;border-radius: 5px;font-size: 21px;">Acesso Rápido</h4>
+                                <a href="#" class="nav-link text-decoration-none">PerguntasFrequentes</a>
                                 <p>
                                     <a href="http://pmpedrotoledo.geosiap.net.br/portal-transparencia/" target="_blank"><img src="{{ asset('images/transparencia.png') }}" class="img-thumbnail m-1" style="max-width: 180px" alt="Portal da Transparência"></a>
                                     <a href="http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/issonline/iss.login.php" target="_blank"><img src="{{ asset('images/nota-fiscal.png') }}" class="img-thumbnail m-1" style="max-width: 180px" alt="Nota Fiscal Eletrônica"></a>

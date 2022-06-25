@@ -75,16 +75,16 @@
                     <a class="nav-link dropdown-toggle " href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Turismo</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                         <li><a class="dropdown-item" href="{{ route('hospedaria') }}">Hoteis e Pousadas</a></li>
-                        
-    
+
+
                     </ul>
                 </li>
                 -->
             </ul>
 
-            
 
-            <button id="click">Contraste</button>
+
+            <button class="btn btn-sm btn-info" id="click">Contraste</button>
 
             <!--
             <div class="form-check form-switch m-">
@@ -97,8 +97,8 @@
             -->
 
             <div class="btn-container m-1" text-primary>
-                <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
-                <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+                <button name="increase-font" id="increase-font" title="Aumentar fonte" class="btn btn-sm btn-info" id="click">A +</button>
+                <button name="decrease-font" id="decrease-font" title="Diminuir fonte" class="btn btn-sm btn-info" id="click">A -</button>
             </div>
 
         </div>

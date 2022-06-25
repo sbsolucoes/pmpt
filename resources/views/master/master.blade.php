@@ -66,7 +66,8 @@
     <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
     <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
     <script type="text/javascript" src="{{ asset('css/alterar.js') }}"></script>
-
+    <link rel="stylesheet" href="" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
 </body>
 
 </html>
