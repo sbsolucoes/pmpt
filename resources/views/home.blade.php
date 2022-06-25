@@ -87,7 +87,7 @@
                 <div class="col">
                     <div class="card border-0">
                         <a href="{{ route('comunicado', $c->idComunicados) }}">
-                            <img class="img-fluid img-thumbnail shadow p-0" src="{{ $c->file }}"  alt="{{ $c->com_titulo }}"/>
+                            <img class="img-fluid img-thumbnail shadow p-0" src="{{ $c->file }}"  alt="{{ $c->com_titulo }}" style="width: 100%; height: 350px"/>
                         </a>
 
                     </div>
