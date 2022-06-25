@@ -4,18 +4,15 @@
 
     <div class="container-fluid">
         <div class="row float-left">
-            <div class="col-md-8">
+            <div class="col-md-8 mt-5">
                 <div class="col">
-                    <hr class="mt-2 mb-2">
-                        <h2 class="font-weight-light text-center text-lg-left mt-2 mb-1"></h2>
-                        <hr class="mt-2 mb-2">
                     <div class="row g-5">
                         @foreach ($noticias as $n)
                             <div class="col-sm-4">
                                 <div class="card border-0">
                                     <img src="{{ $n->url_file }}" class="card-img-top" alt="{{ $n->post_title }}" style="width: 100%; height: 287px">
 
-                                    <div class="card-body">
+                                    <div class="card-body text-center" style="padding: 0;">
                                         <p class="card-title fw-bolder text-uppercase">{{ $n->post_title }}</p>
                                         <a href="{{ route('noticias', $n->id) }}" class="btn btn-primary">Mais Informações</a>
                                     </div>
@@ -82,7 +79,7 @@
         <hr class="mt-2 mb-2">
         <h2 class="font-weight-light text-center text-lg-left mt-2 mb-1">Comunicados e Avisos</h2>
         <hr class="mt-2 mb-2">
-        <div class="row">
+        <div class="row mt-2">
             @foreach ($comunicado as $c)
                 <div class="col">
                     <div class="card border-0">
