@@ -13,7 +13,7 @@
                         @foreach ($noticias as $n)
                             <div class="col-sm-4">
                                 <div class="card border-0">
-                                    <img src="{{ $n->url_file }}" class="card-img-top" alt="{{ $n->post_title }}">
+                                    <img src="{{ $n->url_file }}" class="card-img-top" alt="{{ $n->post_title }}" style="width: 100%; height: 287px">
 
                                     <div class="card-body">
                                         <p class="card-title fw-bolder text-uppercase">{{ $n->post_title }}</p>
