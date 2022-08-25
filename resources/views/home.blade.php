@@ -60,6 +60,7 @@
                                 <a href="#" class="nav-link text-decoration-none">PerguntasFrequentes</a>
                                 <p>
                                     <a href="http://pmpedrotoledo.geosiap.net.br/portal-transparencia/" target="_blank"><img src="{{ asset('images/transparencia.png') }}" class="img-thumbnail m-1" style="max-width: 180px" alt="Portal da Transparência"></a>
+                                    <a href="https://leismunicipais.com.br/legislacao-municipal/5155/leis-de-pedro-de-toledo" target="_blank"><img src="{{ asset('images/leis-municipais.jpg') }}" class="img-thumbnail m-1" style="max-width: 180px" alt="Leis Municipais"></a>
                                     <a href="http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/issonline/iss.login.php" target="_blank"><img src="{{ asset('images/nota-fiscal.png') }}" class="img-thumbnail m-1" style="max-width: 180px" alt="Nota Fiscal Eletrônica"></a>
                                     <a href="{{route('licitacao')}}" target="_blank"><img src="{{ asset('images/licitacoes.png') }}" class="img-thumbnail m-1" style="max-width: 180px" alt="Licitações"></a>
                                     <a href="http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/websis/portal_transparencia/financeiro/contas_publicas/index.php?consulta=sic" target="_blank"><img src="{{ asset('images/sic.png') }}" class="img-thumbnail m-1" style="max-width: 180px" alt="Acesso à Informação"></a>

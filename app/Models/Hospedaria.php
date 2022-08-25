@@ -19,6 +19,7 @@ class Hospedaria extends Model
         'email',
         'tipo',
         'foto',
+        'facebook',
         'status'
     ];
     //public $timestamps = false;

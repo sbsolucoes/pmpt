@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Documento;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DocumentoController extends Controller
 {
@@ -12,18 +13,44 @@ class DocumentoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct(Documento $documento)
+    {
+        $this->atos_copy2 = $documento;                           
+         
+    }
     public function index(Request $request)
     {
         $filters = $request->except('_token');
 
-        $atos = Documento::where('status', 1)->where('assunto', 'LIKE', "%{$request->nome}%")
+        //if ($request->data1 != null && $request->data2 == null){$request->data2 = $request->data1;}
+
+        $atos = Documento::where('status', 1)
+            ->where('assunto', 'LIKE', "%{$request->nome}%")
             ->orwhere('numero', 'LIKE', "%{$request->nome}%")
-            ->orWhere('data', 'LIKE', "%{$request->nome}%")
+            ->orWhereBetween('data', [$request->data1, $request->data2])
             ->orderBy('data', 'desc')
             ->orderBy('numero', 'DESC')
-            ->Paginate(20);
+            ->Paginate(15);       
 
-        return view('docs.atos', compact('atos', 'filters'));
+        /*
+        {
+            return redirect()
+                    ->route('docs.atos')
+                    ->withErrors(['errors' => 'Informe pelo menos uma condição de pesquisa']);
+        }        
+        
+        if ($request->nome != null) {
+            $request->nome->where('assunto', 'like', $request->nome);
+        }
+        
+        if ($request->data1 != null){
+            $request->data1->whereBetween('data', [$request->data1, $request->data2]);
+        }
+        //$documentos = $query->orderBy('nome', 'ASC')->get();
+        */       
+
+        return view('docs.atos', compact('atos'));
+        //return view('docs.leis', compact('lei'));
     }
 
     /**
