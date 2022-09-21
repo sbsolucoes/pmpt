@@ -46,7 +46,7 @@
                         <li><a class="dropdown-item" href="http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/websis/siapegov/recursos_humanos/grh/grh_rh_online.php">Folha de Pagamento Online</a></li>
                         <li><a class="dropdown-item" href="http://legislativo.pedrodetoledo.sp.gov.br/pdf/modelo-de-declaracao-de-bens-e-valores.doc">Declaração Anual de Bens - Editável (Utilizar Edge ou Firefox)</a></li>
                         <li><a class="dropdown-item" href="http://legislativo.pedrodetoledo.sp.gov.br/pdf/modelo-de-declaracao-de-bens-e-valores.pdf">Declaração Anual de Bens - PDF</a></li>
-
+                        <li><a class="dropdown-item" href="https://legislativo.pedrodetoledo.sp.gov.br/pdf/requerimento-abonada.pdf" target="_blank">Requerimento Falta Abonada</a></li>
                     </ul>
 
                 </li>
