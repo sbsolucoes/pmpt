@@ -2,35 +2,21 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-/*
-Route::get('/', function () {
-    return view('');
-});
-*/
+use App\Http\Controllers\NoticiaController;
 
 
 Route::get('/', [App\Http\Controllers\NoticiaController::class, 'index'])->name('home');
 
-Route::get('contact/contato', [App\Http\Controllers\ContactController::class, 'index'])->name('contato');
+Route::get('contato', [App\Http\Controllers\ContactController::class, 'index'])->name('contato');
 
-Route::get('posts/show/{id}', [App\Http\Controllers\NoticiaController::class, 'show'])->name('noticias');
+Route::group(['prefix' => 'publicacao'], function(){
+    Route::get('{categoria_slug}/{publicacao_slug}', [NoticiaController::class, 'show'])->name('noticias');
+});
+Route::get('comunicado/{idComunicados}', [App\Http\Controllers\ComunicadoController::class, 'show'])->name('comunicado');
 
-Route::get('posts/comunicado/{idComunicados}', [App\Http\Controllers\ComunicadoController::class, 'show'])->name('comunicado');
+Route::get('departamentos', [App\Http\Controllers\DepartamentoController::class, 'index'])->name('departamentos');
 
-Route::get('posts/departamentos', [App\Http\Controllers\DepartamentoController::class, 'index'])->name('departamentos');
-
-Route::get('posts/hospedaria', [App\Http\Controllers\HospedariaController::class, 'index'])->name('hospedaria');
+Route::get('hospedaria', [App\Http\Controllers\HospedariaController::class, 'index'])->name('hospedaria');
 
 
 
