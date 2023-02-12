@@ -14,7 +14,7 @@
 
                                     <div class="card-body text-center" style="padding: 0;">
                                         <p class="card-title fw-bolder text-uppercase">{{ $n->post_title }}</p>
-                                        <a href="{{ route('noticias', $n->id) }}" class="btn btn-primary">Mais Informações</a>
+                                        <a href="{{ route('noticias', ['categoria_slug' => $n->categoria->slug, 'publicacao_slug' => $n->post_name ]) }}" class="btn btn-primary">Mais Informações</a>
                                     </div>
                                 </div>
                             </div>
@@ -81,11 +81,11 @@
         <h2 class="font-weight-light text-center text-lg-left mt-2 mb-1">Comunicados e Avisos</h2>
         <hr class="mt-2 mb-2">
         <div class="row mt-2">
-            @foreach ($comunicado as $c)
+            @foreach ($comunicados as $comunicado)
                 <div class="col">
                     <div class="card border-0">
-                        <a href="{{ route('comunicado', $c->idComunicados) }}">
-                            <img class="img-fluid img-thumbnail shadow p-0" src="{{ $c->file }}"  alt="{{ $c->com_titulo }}" style="width: 100%; height: 350px"/>
+                        <a href="{{ route('comunicado', $comunicado->idComunicados) }}">
+                            <img class="img-fluid img-thumbnail shadow p-0" src="{{ $comunicado->file }}"  alt="{{ $comunicado->com_titulo }}" style="width: 100%; height: 350px"/>
                         </a>
 
                     </div>

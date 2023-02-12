@@ -22,4 +22,12 @@ class Comunicado extends Model
         return $this->cms.$url;
 
     }
+
+    public function onlyActive(int $limit = 3)
+    {
+        return $this->where('exibir', true)
+            ->orderBy('idComunicados', 'desc')
+            ->take($limit)
+            ->get();
+    }
 }

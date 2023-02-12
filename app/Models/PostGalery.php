@@ -22,7 +22,7 @@ class PostGalery extends Model
     public function getFilePathAttribute(string $value): string
     {
         if(app()->environment() != 'production'){
-            return "http://localhost:8080/{$value}";
+            return "http://localhost:8000/{$value}";
         }
 
         return "{$this->cms}{$value}";
