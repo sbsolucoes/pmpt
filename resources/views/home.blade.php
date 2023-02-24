@@ -57,7 +57,6 @@
                                 <!--Links Úteis-->
                                 <hr class="mt-2 mb-2">
                                 <h4 style="background-color: #e3f2fd;width: 100%;padding: 5px;border-radius: 5px;font-size: 21px;">Acesso Rápido</h4>
-                                <a href="#" class="nav-link text-decoration-none">PerguntasFrequentes</a>
                                 <p>
                                     @foreach(config('toledo.links') as $key => $item)
                                     <a href="{{ $item['link'] ?? route($item['route']) }}{{ $item['get'] ?? '' }}" target="_blank">
