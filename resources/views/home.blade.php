@@ -59,18 +59,11 @@
                                 <h4 style="background-color: #e3f2fd;width: 100%;padding: 5px;border-radius: 5px;font-size: 21px;">Acesso Rápido</h4>
                                 <a href="#" class="nav-link text-decoration-none">PerguntasFrequentes</a>
                                 <p>
-                                    <a href="http://pmpedrotoledo.geosiap.net.br/portal-transparencia/" target="_blank"><img src="{{ asset('images/transparencia.png') }}" class="img-thumbnail m-1" style="max-width: 180px" alt="Portal da Transparência"></a>
-                                    <a href="https://leismunicipais.com.br/legislacao-municipal/5155/leis-de-pedro-de-toledo" target="_blank"><img src="{{ asset('images/leis-municipais.jpg') }}" class="img-thumbnail m-1" style="max-width: 180px" alt="Leis Municipais"></a>
-                                    <a href="http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/issonline/iss.login.php" target="_blank"><img src="{{ asset('images/nota-fiscal.png') }}" class="img-thumbnail m-1" style="max-width: 180px" alt="Nota Fiscal Eletrônica"></a>
-                                    <a href="{{route('licitacao')}}" target="_blank"><img src="{{ asset('images/licitacoes.png') }}" class="img-thumbnail m-1" style="max-width: 180px" alt="Licitações"></a>
-                                    <a href="http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/websis/portal_transparencia/financeiro/contas_publicas/index.php?consulta=sic" target="_blank"><img src="{{ asset('images/sic.png') }}" class="img-thumbnail m-1" style="max-width: 180px" alt="Acesso à Informação"></a>
-                                    <a href="https://email.uolhost.com.br/pedrodetoledo.sp.gov.br/" target="_blank"><img src="{{ asset('images/webmail.png') }}" class="img-thumbnail m-1" style="max-width: 180px" alt="Webmail"></a>
-                                    <a href="{{ route('concursos') }}"><img src="{{ asset('images/concursos.jpg') }}" class="img-thumbnail m-1" style="max-width: 180px" alt="Concursos e Processos Seletivos"></a>
-                                    <a href="https://legislativo.pedrodetoledo.sp.gov.br/pdf/Carta-de-Servicos-ao-Usuario.pdf" target="_blank"><img src="{{ asset('images/carta.jpg') }}" class="img-thumbnail m-1" style="max-width: 180px" alt="Carta de Serviços ao Usuário"></a>
-                                    <a href="https://www.poupatempo.sp.gov.br/wps/portal/portalpoupatempo/servicos/intermediarias/carteira-vacina-covid19/!ut/p/z1/lZFNb4JAEIZ_Sw8cywwsIdjbGhSQlpXiB92LAUNXEmQNUkn_fTd6IkGq720nzzOZvAscUuB1dilF1payzir1_uL2LqQu-tMEGUbhFOOIJpv15wQdw4LtFYh81_QtDxljBDGeEBtJsEEV4E_5zmzuYhwsQjeaGabHrCd9b25Q5a9MknwsCXu3H_PxTuiD948AfHz9FvgVGWuwDwxU1AcGOvjvigVwUcn89uG0zokjgDfFd9EUjf7TqPGhbU_nNw017LpOF1KKqtD38qjhkHKQ5xbSPgmn41olxTJ45flv9_IH8rI7UA!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/" target="_blank"><img src="{{ asset('images/cert-covid.jpg') }}" class="img-thumbnail m-1" style="max-width: 180px" alt="Webmail"></a></p>
-                                    <a href="{{ route('licitacao') }}?tipoLic=8">
-                                        <img style="max-width:180px;" src="{{ asset('images/aviso-dispensa-licitacao.jpeg') }}" class="img-thumbnail m-1" alt="Aviso de Dispensa Licitação">
+                                    @foreach(config('toledo.links') as $key => $item)
+                                    <a href="{{ $item['link'] ?? route($item['route']) }}{{ $item['get'] ?? '' }}" target="_blank">
+                                        <img src="{{ asset($item['src']) }}" class="img-thumbnail m-1" style="max-width: 180px" alt="{{ $item['description'] }}">
                                     </a>
+                                    @endforeach
                                 </p>
                             </div>
                         </div>
