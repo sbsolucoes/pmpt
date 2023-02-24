@@ -68,6 +68,9 @@
                                     <a href="{{ route('concursos') }}"><img src="{{ asset('images/concursos.jpg') }}" class="img-thumbnail m-1" style="max-width: 180px" alt="Concursos e Processos Seletivos"></a>
                                     <a href="https://legislativo.pedrodetoledo.sp.gov.br/pdf/Carta-de-Servicos-ao-Usuario.pdf" target="_blank"><img src="{{ asset('images/carta.jpg') }}" class="img-thumbnail m-1" style="max-width: 180px" alt="Carta de Serviços ao Usuário"></a>
                                     <a href="https://www.poupatempo.sp.gov.br/wps/portal/portalpoupatempo/servicos/intermediarias/carteira-vacina-covid19/!ut/p/z1/lZFNb4JAEIZ_Sw8cywwsIdjbGhSQlpXiB92LAUNXEmQNUkn_fTd6IkGq720nzzOZvAscUuB1dilF1payzir1_uL2LqQu-tMEGUbhFOOIJpv15wQdw4LtFYh81_QtDxljBDGeEBtJsEEV4E_5zmzuYhwsQjeaGabHrCd9b25Q5a9MknwsCXu3H_PxTuiD948AfHz9FvgVGWuwDwxU1AcGOvjvigVwUcn89uG0zokjgDfFd9EUjf7TqPGhbU_nNw017LpOF1KKqtD38qjhkHKQ5xbSPgmn41olxTJ45flv9_IH8rI7UA!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/" target="_blank"><img src="{{ asset('images/cert-covid.jpg') }}" class="img-thumbnail m-1" style="max-width: 180px" alt="Webmail"></a></p>
+                                    <a href="{{ route('licitacao') }}?tipoLic=8">
+                                        <img style="max-width:180px;" src="{{ asset('images/aviso-dispensa-licitacao.jpeg') }}" class="img-thumbnail m-1" alt="Aviso de Dispensa Licitação">
+                                    </a>
                                 </p>
                             </div>
                         </div>
