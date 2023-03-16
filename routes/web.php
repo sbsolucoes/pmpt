@@ -1,13 +1,28 @@
 <?php
 
+use App\Mail\MeAjudaMail;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\NoticiaController;
+use App\Http\Controllers\ContactController;
 
 
 Route::get('/', [App\Http\Controllers\NoticiaController::class, 'index'])->name('home');
 
-Route::get('contato', [App\Http\Controllers\ContactController::class, 'index'])->name('contato');
+
+
+Route::prefix("contato")->group(function(){
+    Route::get('', [ContactController::class, 'index'])->name('contato');
+    Route::post("contatoSend", [ContactController::class, "contatoEmail"])->name("contato.sendEmail");
+
+});
+
+Route::prefix("ouvidoria")->group(function(){
+    Route::get('', [ContactController::class, 'ouvidoria'])->name('ouvidoria');
+    Route::post("ouvidoriaSend", [ContactController::class, "ouvidoriaEmail"])->name("ouvidoria.sendEmail");
+});
+
+
 
 Route::group(['prefix' => 'publicacao'], function(){
     Route::get('{categoria_slug}/{publicacao_slug}', [NoticiaController::class, 'show'])->name('noticias');
@@ -40,12 +55,21 @@ Route::any('docs/licitacao', [App\Http\Controllers\LicitacaoController::class, '
 
 Route::get('docs/detalheLicitacao/{idLicitacao}', [App\Http\Controllers\DetalheLicitacaoController::class, 'index'])->name('detalheLicitacao');
 
-Route::get('concursos', [App\Http\Controllers\ConcursoController::class, 'index'])->name('concursos');
+Route::prefix("concursos")->group(function(){
+    Route::get('', [App\Http\Controllers\ConcursoController::class, 'index'])->name('concursos');
+    Route::get('detalhes/{id_conc}', [App\Http\Controllers\ConcursoDetalheController::class, 'show'])->name('conc_det');
+    Route::get('download/{idConcdetalhe}', [App\Http\Controllers\ConcursoDetalheController::class, 'show'])->name('downloadfile');
+});
 
-Route::get('concurso/detalhes/{id_conc}', [App\Http\Controllers\ConcursoDetalheController::class, 'show'])->name('conc_det');
+Route::get('email', function(){
+    $attributes = [
+        "nome" => "Alexandre Sofiati",
+        "email" => "alexandresofiati@hotmail.com",
+        "mensagem" => "Apenas um teste"
+    ];
 
-//Route::get('docs/concursos_detalhes/{doc}', [App\Http\Controllers\ConcursoDetalheController::class, 'index'])->name('download');
+    \Log::info($attributes);
 
-Route::get('/{idConcdetalhe}', [App\Http\Controllers\ConcursoDetalheController::class, 'show'])->name('downloadfile');
-
-//Route::get('posts/perguntas', [App\Http\Controllers\PerguntasController::class, 'index'])->name('faq');
+    \Illuminate\Support\Facades\Mail::to("")->send(new MeAjudaMail($attributes, "ouvidoria"));
+    //return (new MeAjudaMail($attributes, "contato"))->render();
+});
