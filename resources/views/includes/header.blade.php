@@ -65,7 +65,10 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('contato') }}">Ouvidoria</a>
+                    <a class="nav-link" href="{{ route('contato') }}">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('ouvidoria') }}">Ouvidoria</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://mailpro.uol.com.br/pedrodetoledo.sp.gov.br" target="_blank">Webmail</a>

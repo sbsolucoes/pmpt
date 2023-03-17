@@ -37,7 +37,7 @@ input[type=checkbox]{
     visibility: hidden;
 }
 
-label {
+/*label {
     cursor: pointer;
     text-indent: -9999px;
     width: 52px;
@@ -71,7 +71,7 @@ input:checked + label::after {
 
 label:active:after {
     width: 45px;
-}
+}*/
 /* Galeria */
 
 .photo-gallery {

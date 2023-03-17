@@ -2,118 +2,55 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\OuvidoriaRequest;
+use App\Mail\MeAjudaMail;
 use Illuminate\Http\Request;
- use Mail;
- use App\Mail\SendMail;
- use App\Models\Contato;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Contracts\View\View;
 
 class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return View
      */
-    public function index()
+    public function index(): View
     {
-        return view('contact.contato');
+        $url = route("contato.sendEmail");
+        return view('contact.contato', compact('url'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function ouvidoria(): View
     {
-        //
+        $url = route("ouvidoria.sendEmail");
+        return view('contact.contato', compact('url'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function contatoEmail(OuvidoriaRequest $request): \Illuminate\Http\RedirectResponse
     {
-        
-        $request->validate([
-            'nome' => 'required',
-            'email' => 'required|email',
-            'mensagem' => 'required'
-        ]);
+        return $this->sendEmail($request, "contato");
+    }
 
-        // AQUI EH A DIFERENÇA DO HACKER
-        $contato = new ContactForm($request);
+    public function ouvidoriaEmail(OuvidoriaRequest $request): \Illuminate\Http\RedirectResponse
+    {
 
+        return $this->sendEmail($request, "ouvidoria-saude");
+    }
+
+    protected function sendEmail(Request $request, string $origin): \Illuminate\Http\RedirectResponse
+    {
         try {
-            $contato->sendMail();
-            $contato->saveMail();
-
-            return back()
-                ->with('success', 'Obrigado por nos contactar');
-        } catch (\Exception $error) {
-            return back()->with("error", "Ocorreu um erro inesperado: {$error->getMessage()}");
+            Mail::to("")->send(new MeAjudaMail(
+                array_merge(
+                    $request->validated(),
+                    ['today' => now()->format('d/m/Y H:i:s')]
+                ), $origin
+            ));
+            return redirect()->back()->with("success", "Solicitação enviada com sucesso");
+        }catch (\Throwable $throwable){
+            return redirect()->back()->with("error", "Não foi possivel atender a sua solicitação");
         }
-
-
-
-        // $data = array(
-        //     'nome' => $request->nome,
-        //     'email' => $request->email,
-        //     'mensagem' => $request->mensagem
-        // );
-
-        // Mail::to( config('mail.from.address') )
-        //     ->send( new SendMail($data) );
-
-        // return back()
-        //         ->with('success', 'Obrigado por nos contactar');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }
