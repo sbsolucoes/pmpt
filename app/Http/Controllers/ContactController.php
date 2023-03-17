@@ -17,12 +17,14 @@ class ContactController extends Controller
      */
     public function index(): View
     {
-        return view('contact.contato');
+        $url = route("contato.sendEmail");
+        return view('contact.contato', compact('url'));
     }
 
     public function ouvidoria(): View
     {
-        return view('contact.contato');
+        $url = route("ouvidoria.sendEmail");
+        return view('contact.contato', compact('url'));
     }
 
     public function contatoEmail(OuvidoriaRequest $request): \Illuminate\Http\RedirectResponse
@@ -33,16 +35,18 @@ class ContactController extends Controller
     public function ouvidoriaEmail(OuvidoriaRequest $request): \Illuminate\Http\RedirectResponse
     {
 
-        return $this->sendEmail($request, "ouvidoria");
+        return $this->sendEmail($request, "ouvidoria-saude");
     }
 
     protected function sendEmail(Request $request, string $origin): \Illuminate\Http\RedirectResponse
     {
         try {
             Mail::to("")->send(new MeAjudaMail(
-                $request->validated(), $origin
+                array_merge(
+                    $request->validated(),
+                    ['today' => now()->format('d/m/Y H:i:s')]
+                ), $origin
             ));
-            $this->sendEmail($request->validated(), $origin);
             return redirect()->back()->with("success", "Solicitação enviada com sucesso");
         }catch (\Throwable $throwable){
             return redirect()->back()->with("error", "Não foi possivel atender a sua solicitação");

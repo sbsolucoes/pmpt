@@ -24,9 +24,9 @@ class OuvidoriaRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nome' => 'required',
+            'nome' => 'required|min:4',
             'email' => 'required|email',
-            'mensagem' => 'required'
+            'mensagem' => 'required|min:10'
         ];
     }
 }

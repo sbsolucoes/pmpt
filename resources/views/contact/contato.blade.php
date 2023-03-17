@@ -11,22 +11,24 @@
                     Envie sua reclamação / Sugestão / Elogio
                 </div>
                 <div class="card-body">
-                    <form  method="POST" action="{{ route('contato.sendEmail') }}">
+                    @if(session('success'))
+                        <x-alert type="success" message="{{ session('success') }}"/>
+                    @endif
+
+                    @if(session('error'))
+                        <x-alert type="danger" message="{{ session('error') }}"/>
+                    @endif
+
+                    <form class="needs-validation"  method="POST" action="{{ $url }}">
                         @csrf
                         <div class="form-group">
-                            <label for="nome">Nome</label>
-                            <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite seu nome">
-                            @error("nome")
-                            <div class="valid-feedback">{{ $message }}</div>
-                            @enderror
+                            <x-form-input name="nome" label="Nome" placeholder="Preencha seu nome" />
                         </div>
                         <div class="form-group mt-2">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" class="form-control" placeholder="Digite seu e-mail">
+                            <x-form-input name="email" label="Email" placeholder="Preencha seu email" />
                         </div>
                         <div class="form-group mt-2">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea name="mensagem" id="mensagem" class="form-control" cols="30" rows="10"></textarea>
+                            <x-form-textarea name="mensagem" label="Mensagem" placeholder="Digite aqui sua mensagem" />
                         </div>
                         <div class="form-group mt-2">
                             <button type="submit" class="btn btn-primary">Enviar</button>

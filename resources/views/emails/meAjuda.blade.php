@@ -155,6 +155,10 @@
                                                 </font>
                                                 <br>
                                                 <font face="Arial, Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana, sans-serif" color="#2C3565" style="font-size: 14px">
+                                                    <strong>Data/Hora</strong>: {{ $attributes["today"] }}
+                                                </font>
+                                                <br>
+                                                <font face="Arial, Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana, sans-serif" color="#2C3565" style="font-size: 14px">
                                                     <strong>Mensagem</strong>: {{ $attributes["mensagem"] }}
                                                 </font>
                                             </td>
