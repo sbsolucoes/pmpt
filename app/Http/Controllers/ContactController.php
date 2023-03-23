@@ -35,7 +35,7 @@ class ContactController extends Controller
     public function ouvidoriaEmail(OuvidoriaRequest $request): \Illuminate\Http\RedirectResponse
     {
 
-        return $this->sendEmail($request, "ouvidoria-saude");
+        return $this->sendEmail($request, "ouvidoriamunicipal");
     }
 
     protected function sendEmail(Request $request, string $origin): \Illuminate\Http\RedirectResponse
