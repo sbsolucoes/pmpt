@@ -127,7 +127,7 @@
                             <tr>
                                 <td align="center">
                                     <font face="Arial, Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana, sans-serif" color="#2C3565" style="font-size: 20px">
-                                        <strong>Nova Contato</strong>
+                                        <strong>Novo Mensagem</strong>
                                     </font>
                                 </td>
                             </tr>
