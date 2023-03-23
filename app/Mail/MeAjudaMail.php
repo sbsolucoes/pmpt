@@ -29,13 +29,11 @@ class MeAjudaMail extends Mailable
     }
 
     /**
-     * Build the message.
-     *
-     * @return $this
+     * @return void
      */
-    public function build()
+    public function build(): void
     {
-        $this->to($this->setEmailTo())
+        $this->to($this->getEmailTo())
             ->subject($this->getSubject())
             ->view('emails.meAjuda')
             ->with([
@@ -43,10 +41,13 @@ class MeAjudaMail extends Mailable
             ]);
     }
 
-
-    protected function setEmailTo(): string
+    /**
+     * Para quem tem que enviar o email
+     * @return string[]
+     */
+    protected function getEmailTo(): array
     {
-        return "{$this->origin}@pedrodetoledo.sp.gov.br";
+        return ["webmaster@pedrodetoledo.sp.gov.br", "{$this->origin}@pedrodetoledo.sp.gov.br"];
     }
 
     protected function getSubject()
