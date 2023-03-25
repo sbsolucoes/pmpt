@@ -8,59 +8,52 @@
                 <div class="col">
                     <div class="row">
                         <div class="col-sm-12 text-dark text-center my-3">
-                            <h1>Pesquisa de Atos</h1>
+                            <h1>@isset($documentType) {{ $documentType }} @else Pesquisa de Atos @endisset</h1>
                             <hr class="mt-2 mb-2">
                         </div>
                     </div>
 
                     <div class="search">
-                        <h2 class="title">Pesquisar Atos</h2>
-                        <br>
-
-                        
-                        <form  method="post"  >
-                            @csrf
-                            <input type="text" name="nome" placeholder="Digite a pesquisa" />
-                            <input type="submit" value="Buscar" />
-
+                        <form class="mb-5"  method="GET">
+                            <div class="row container">
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" name="nome" placeholder="Digite a pesquisa" value="{{ request()->has('nome') ? request()->nome : '' }}" />
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn btn-primary">Procurar</button>
+                                </div>
+                            </div>
                         </form>
-                    
-
-                    
-
                     </div>
                     <table class="table table-striped">
                         <thead>
-                    @if(isset($atos) && count($atos) > 0)
-                    <tr>
-                        <th scope="col">Número</th>
-                        <th scope="col">Data</th>
-                        <th scope="col">Assunto</th>
-                        <th></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($atos as $down)
-                        <tr>
-                            <td>{{ $down->numero }}</td>
-                            <td>{{ date('d/m/Y', strtotime($down['data'])) }}</td>
-                            <td>{{ $down->assunto }}</td>
-                            <td>
-                                <a href="{{$down->file}}"  class="btn btn-primary" target="_blank">Abrir</a>
-                            </td>
-                        </tr>
-                    @endforeach
-                    </tbody>
-                </table>
+                            <tr>
+                                <th scope="col">Número</th>
+                                <th scope="col">Data</th>
+                                <th scope="col">Catetoria</th>
+                                <th scope="col">Assunto</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($documentos as $documento)
+                            <tr>
+                                <td>{{ $documento->numero }}</td>
+                                <td>{{ $documento->data_publicacao }}</td>
+                                <td>{{ $documento->document_type }}</td>
+                                <td>{{ $documento->assunto }}</td>
+                                <td>
+                                    <a href="{{ $documento->file }}"  class="btn btn-primary" target="_blank">Abrir</a>
+                                </td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
 
             </div>
 
             <div class="d-flex justify-content-center">
-                @endif
-                    @if(isset($filters))
-                    {{$atos->appends($filters)->links()}}
-
-                @endif
+                {{ $documentos->appends(request()->all())->links() }}
             </div>
         </div>
     </div>

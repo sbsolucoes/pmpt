@@ -56,17 +56,17 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                         <li><a class="dropdown-item" href="https://legislativo.pedrodetoledo.sp.gov.br/pdf/lei-organica-atualizada-2019.pdf" target="_blank">Lei Orgânica</a></li>
-                        <li><a class="dropdown-item" href="{{ route('leis') }}" alt="Leis">Leis</a></li>
-                        <li><a class="dropdown-item" href="{{ route('lc') }}" alt="Leis Complementares">Leis Complementares</a></li>
-                        <li><a class="dropdown-item" href="{{ route('decretos') }}" alt="Decretos">Decretos</a></li>
-                        <li><a class="dropdown-item" href="{{ route('portarias') }}" alt="Portarias">Portarias</a></li>
+                        <li><a class="dropdown-item" href="{{ route('atos.key', 'leis') }}" alt="Leis">Leis</a></li>
+                        <li><a class="dropdown-item" href="{{ route('atos.key', 'lei-complementar') }}" alt="Leis Complementares">Leis Complementares</a></li>
+                        <li><a class="dropdown-item" href="{{ route('atos.key', 'decretos') }}" alt="Decretos">Decretos</a></li>
+                        <li><a class="dropdown-item" href="{{ route('atos.key', 'portarias') }}" alt="Portarias">Portarias</a></li>
                         <li><a class="dropdown-item" href="{{ route('atos') }}" alt="Leis">Atos</a></li>
                     </ul>
                 </li>
 
-                <li class="nav-item">
+                <!--<li class="nav-item">
                     <a class="nav-link" href="{{ route('contato') }}">Contato</a>
-                </li>
+                </li>-->
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('ouvidoria') }}">Ouvidoria</a>
                 </li>

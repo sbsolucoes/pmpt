@@ -5,7 +5,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 mh-100">
-                <div class="col"> 
+                <div class="col">
                     <div class="row">
                         <div class="col-sm-12 text-dark text-center my-3">
                             <h1>Licitação</h1>
@@ -31,7 +31,7 @@
                             <h5 class="card-header">Nº {{ $down->numeroLicitacao }}</h5>
                                 <div class="card-body">
                                     <p class="card-text">{!!html_entity_decode($down->content)!!}</p>
-                                    <a href="{{route('detalheLicitacao', $down->idLicitacao)}}"  class="btn btn-primary">Abrir</a>
+                                    <a href="{{route('licitacao.detalhe', $down->idLicitacao)}}"  class="btn btn-primary">Abrir</a>
                                 </div>
                         </div>
                         <br>@endforeach
