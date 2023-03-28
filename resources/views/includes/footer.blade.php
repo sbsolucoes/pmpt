@@ -20,7 +20,10 @@
                     <nav class="navbar navbar-dark">
 
                         <ul class="nav flex-column">
-
+                            <li class="nav-item">
+                                <a class="nav-link text-white" aria-current="page" href="{{ route('glossario') }}"
+                                   target="_blank">Glossário</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white" aria-current="page" href="https://camaradepedrodetoledo.sp.gov.br/"
                                     target="_blank">Câmara Municipal de Pedro de Toledo</a>

@@ -55,5 +55,5 @@ Route::prefix("concursos")->group(function(){
 });
 
 Route::controller(PageController::class)->group(function(){
-    Route::get('glossario', 'glossario');
+    Route::get('glossario', 'glossario')->name('glossario');
 });
