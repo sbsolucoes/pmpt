@@ -5,24 +5,22 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NoticiaController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DocumentoController;
+use App\Http\Controllers\ConcursoController;
+use App\Http\Controllers\PageController;
 
 
 Route::get('/', [App\Http\Controllers\NoticiaController::class, 'index'])->name('home');
 
-
-
-Route::prefix("contato")->group(function(){
+Route::group(["prefix" => "contato"], function(){
     Route::get('', [ContactController::class, 'index'])->name('contato');
     Route::post("contatoSend", [ContactController::class, "contatoEmail"])->name("contato.sendEmail");
 
 });
 
-Route::prefix("ouvidoria")->group(function(){
+Route::group(["prefix" => "ouvidoria"],function(){
     Route::get('', [ContactController::class, 'ouvidoria'])->name('ouvidoria');
     Route::post("ouvidoriaSend", [ContactController::class, "ouvidoriaEmail"])->name("ouvidoria.sendEmail");
 });
-
-
 
 Route::group(['prefix' => 'publicacao'], function(){
     Route::get('{categoria_slug}/{publicacao_slug}', [NoticiaController::class, 'show'])->name('noticias');
@@ -34,10 +32,10 @@ Route::get('departamentos', [App\Http\Controllers\DepartamentoController::class,
 Route::get('hospedaria', [App\Http\Controllers\HospedariaController::class, 'index'])->name('hospedaria');
 
 
-Route::prefix("documentos")->group(function(){
-    Route::get('', [App\Http\Controllers\DocumentoController::class, 'index'])
+Route::controller(DocumentoController::class)->prefix("documentos")->group(function(){
+    Route::get('','index')
         ->name('atos');
-    Route::get('{ato}', [DocumentoController::class, "getAto"])
+    Route::get('{ato}', "getAto")
         ->middleware('checkActs')
         ->name("atos.key");
 });
@@ -51,7 +49,11 @@ Route::prefix("licitacao")->group(function(){
 });
 
 Route::prefix("concursos")->group(function(){
-    Route::get('', [App\Http\Controllers\ConcursoController::class, 'index'])->name('concursos');
+    Route::get('', [ConcursoController::class, 'index'])->name('concursos');
     Route::get('detalhes/{id_conc}', [App\Http\Controllers\ConcursoDetalheController::class, 'show'])->name('conc_det');
     Route::get('download/{idConcdetalhe}', [App\Http\Controllers\ConcursoDetalheController::class, 'show'])->name('downloadfile');
+});
+
+Route::controller(PageController::class)->group(function(){
+    Route::get('glossario', 'glossario');
 });

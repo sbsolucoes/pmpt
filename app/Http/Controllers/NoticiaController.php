@@ -4,14 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Comunicado;
 use App\Models\Noticia;
-use App\Models\PostGalery;
 
 class NoticiaController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @param Noticia $noticia
+     * @param Comunicado $comunicado
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function index(Noticia $noticia, Comunicado $comunicado)
     {
@@ -21,7 +20,6 @@ class NoticiaController extends Controller
         return view('home', compact('noticias','comunicados'));
 
     }
-
 
     public function show(string $categoriaSlug, string $publicacaoSlug, Noticia $post)
     {
