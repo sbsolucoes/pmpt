@@ -18,7 +18,7 @@ class Documento extends Model
 
     protected $table = 'atos_copy_2';
     protected $primaryKey = 'idAtos';
-    protected $fillable = ['tipo_doc', 'numero', 'data', 'assunto', 'url', 'data_pub', 'pasta', 'status'];
+    protected $fillable = ['tipo_doc', 'numero', 'data', 'assunto', 'url', 'data_pub', 'pasta', 'status', 'atos_tipo_id'];
     protected $appends = [
         'documentType'
     ];
@@ -27,6 +27,13 @@ class Documento extends Model
     protected $dates = [
         "data"
     ];
+
+    //relations
+
+    public function atosTipo(): \Illuminate\Database\Eloquent\Relations\HasOne
+    {
+        return $this->hasOne(AtosTipo::class, 'id', 'atos_tipo_id');
+    }
 
 
     //mutators
@@ -40,22 +47,12 @@ class Documento extends Model
         return Carbon::parse($this->data)->format('d/m/Y');
     }
 
-    /**
-     * Retorn o tipo do documento
-     * @return string
-     */
-    public function getDocumentTypeAttribute() : string
-    {
-        $documentTypes = array_flip(DocumentosEnum::documentType());
-        return firstWordInUpperCase($documentTypes[$this->tipo_doc]);
-    }
-
     //query
     public function allDocuments(array $filters, int $perPage)
     {
-        $query = $this->active();
+        $query = $this->baseQuery();
 
-        if (Arr::get($filters, "nome"))
+        if (Arr::get($filters, "nome", null))
         {
             $query->likeDescription($filters['nome']);
         }
@@ -66,7 +63,11 @@ class Documento extends Model
 
     public function findByType(string $type, array $filters, int $perPage = 10)
     {
-        $query = $this->active()->byTypeDoc($type);
+        $query = $this->baseQuery();
+
+        $query->whereHas('atosTipo', function ($query) use ($type) {
+            $query->where('slug', $type);
+        });
 
         if (Arr::get($filters, "nome"))
         {
@@ -90,11 +91,6 @@ class Documento extends Model
         return $query->where('status', true);
     }
 
-    public function scopeByTypeDoc(Builder $query, $type): Builder
-    {
-        return $query->where("tipo_doc", $type);
-    }
-
     public function scopeLikeDescription(Builder $query, $description): Builder
     {
         return $query->where("assunto", "LIKE", "%{$description}%");
@@ -104,6 +100,11 @@ class Documento extends Model
     {
         return $query->orderBy('data', 'desc')
             ->orderBy('numero', 'DESC');
+    }
+
+    public function scopeBaseQuery(Builder $query)
+    {
+        return $this->with('atosTipo:id,descricao')->active();
     }
 
 }
