@@ -36,7 +36,6 @@ Route::controller(DocumentoController::class)->prefix("documentos")->group(funct
     Route::get('','index')
         ->name('atos');
     Route::get('{ato}', "getAto")
-        ->middleware('checkActs')
         ->name("atos.key");
 });
 
