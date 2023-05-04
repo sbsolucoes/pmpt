@@ -8,7 +8,7 @@
                 <div class="col">
                     <div class="row">
                         <div class="col-sm-12 text-dark text-center my-3">
-                            <h1>@isset($documentType) {{ $documentType }} @else Pesquisa de Atos @endisset</h1>
+                            <h1>@isset($atoTipo) {{ $atoTipo->descricao }} @else Pesquisa de Atos @endisset</h1>
                             <hr class="mt-2 mb-2">
                         </div>
                     </div>
@@ -40,7 +40,7 @@
                             <tr>
                                 <td>{{ $documento->numero }}</td>
                                 <td>{{ $documento->data_publicacao }}</td>
-                                <td>{{ $documento->document_type }}</td>
+                                <td>{{ $documento->atosTipo->descricao }}</td>
                                 <td>{{ $documento->assunto }}</td>
                                 <td>
                                     <a href="{{ $documento->file }}"  class="btn btn-primary" target="_blank">Abrir</a>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Enuns\DocumentosEnum;
+use App\Models\AtosTipo;
 use App\Models\Documento;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -35,10 +36,9 @@ class DocumentoController extends Controller
      */
     public function getAto(Request $request, string $ato, Documento $documento)
     {
-        $documentTypes = array_flip(DocumentosEnum::documentType());
-        $documentType = firstWordInUpperCase($documentTypes[DocumentosEnum::getDocument($ato)]);
-        $documentos = $documento->findByType(DocumentosEnum::getDocument($ato), $request->all(), $this->perPage);
-        return view("docs.atos", compact('documentos', 'documentType'));
+        $documentos = $documento->findByType($ato, $request->all(), $this->perPage);
+        $atoTipo = AtosTipo::select('descricao')->where('slug', $ato)->firstOrFail();
+        return view("docs.atos", compact('documentos', 'atoTipo'));
     }
 
 }
