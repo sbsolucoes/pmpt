@@ -7,7 +7,7 @@
                 <hr class="mt-2 mb-2">
 
                 @foreach($conselhos as $conselho)
-                    <div class="col-md-4 mt-2 mb-2">
+                    <div class="col-md-6 mt-2 mb-2">
                         <div class="card">
                             <div class="card-body">
                                 <a href="{{ route('conselho.bySlug', ["slug" => $conselho->slug]) }}" style="text-decoration: none">
