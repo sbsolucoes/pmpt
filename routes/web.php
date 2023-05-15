@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Documentos\ConselhoController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\NoticiaController;
@@ -22,7 +23,9 @@ Route::group(["prefix" => "ouvidoria"],function(){
     Route::post("ouvidoriaSend", [ContactController::class, "ouvidoriaEmail"])->name("ouvidoria.sendEmail");
 });
 
+Route::get('publicacoes/categorias', [NoticiaController::class, 'showCategories'])->name('post.categories');
 Route::group(['prefix' => 'publicacao'], function(){
+    Route::get('{slug}', [NoticiaController::class, 'postByCategorieSlug'])->name('post.byCategorySlug');
     Route::get('{categoria_slug}/{publicacao_slug}', [NoticiaController::class, 'show'])->name('noticias');
 });
 Route::get('comunicado/{idComunicados}', [App\Http\Controllers\ComunicadoController::class, 'show'])->name('comunicado');
@@ -31,6 +34,10 @@ Route::get('departamentos', [App\Http\Controllers\DepartamentoController::class,
 
 Route::get('hospedaria', [App\Http\Controllers\HospedariaController::class, 'index'])->name('hospedaria');
 
+Route::prefix('conselhos')->group(function() {
+    Route::get('', [ConselhoController::class, 'index'])->name('conselhos');
+    Route::get('{slug}', [ConselhoController::class, 'bySlug'])->name('conselho.bySlug');
+});
 
 Route::controller(DocumentoController::class)->prefix("documentos")->group(function(){
     Route::get('','index')

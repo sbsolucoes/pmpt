@@ -30,7 +30,7 @@
                             <tr>
                                 <th scope="col">Número</th>
                                 <th scope="col">Data</th>
-                                <th scope="col">Catetoria</th>
+                                <th scope="col">Categoria Documento</th>
                                 <th scope="col">Assunto</th>
                                 <th></th>
                             </tr>

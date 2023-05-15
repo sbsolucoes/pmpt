@@ -25,12 +25,12 @@ class Noticia extends Model
     ];
     //public $timestamps = false;
 
-    public function getUrlFileAttribute(){
+    /**
+     * @return string
+     */
+    public function getUrlFileAttribute(): string
+    {
         $url = explode('wp-content', $this->guid)[1];
-        if(app()->environment() != 'production'){
-            return "http://localhost:8000/wp-content{$url}";
-        }
-
         return $this->cms.$url;
     }
 
@@ -50,9 +50,23 @@ class Noticia extends Model
         return $this->hasMany(PostGalery::class, 'post_id', 'id');
     }
 
-    //querys
+    /**
+     * @param string $slug
+     * @return mixed
+     */
+    public function getAllBySlug(string $slug)
+    {
+        return $this->wherehas('categoria', function($query) use($slug) {
+            $query->where([
+                'slug' => $slug,
+                'status' => true
+            ]);
+        })->with('categoria')
+            ->where("post_status", true)
+            ->orderBy('post_date', 'DESC')->paginate(15);
+    }
 
-    public function findBySlugs(string $cagoriaSlug, string $postSlug): Model
+    public function findBySlugs(string $cagoriaSlug, string $postSlug)
     {
         return $this->with(['galeriaImagens'])->whereHas('categoria', function($query) use($cagoriaSlug){
             $query->where([
@@ -71,6 +85,11 @@ class Noticia extends Model
             ->orderBy('post_date', 'desc')
             ->take($limit)
             ->get();
+    }
+
+    public function scopeActive()
+    {
+        $this->where('post_status', true);
     }
 
 }
