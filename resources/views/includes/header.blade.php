@@ -47,6 +47,7 @@
                         <li><a class="dropdown-item" href="http://legislativo.pedrodetoledo.sp.gov.br/pdf/modelo-de-declaracao-de-bens-e-valores.doc">Declaração Anual de Bens - Editável (Utilizar Edge ou Firefox)</a></li>
                         <li><a class="dropdown-item" href="http://legislativo.pedrodetoledo.sp.gov.br/pdf/modelo-de-declaracao-de-bens-e-valores.pdf">Declaração Anual de Bens - PDF</a></li>
                         <li><a class="dropdown-item" href="https://legislativo.pedrodetoledo.sp.gov.br/pdf/requerimento-abonada.pdf" target="_blank">Requerimento Falta Abonada</a></li>
+                        <li><a class="dropdown-item" href="https://legislativo.pedrodetoledo.sp.gov.br/pdf/autorizacao-retirada-cesta-basica.pdf" target="_blank">Autorização para retirada de Cesta Básica</a></li>
                     </ul>
 
                 </li>
