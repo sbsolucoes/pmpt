@@ -65,6 +65,11 @@ return [
             "src" => "images/aviso-dispensa-licitacao.jpeg",
             "description" => "Aviso de Dispensa Licitação"
         ],
+        [
+            "link" => "https://transparencia.atricon.org.br",
+            "src" => "images/tranparencia.jpeg",
+            "description" => "Transparéncia"
+        ],
 
     ]
 
