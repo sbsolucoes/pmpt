@@ -70,6 +70,11 @@ return [
             "src" => "images/tranparencia.jpeg",
             "description" => "Transparéncia"
         ],
+        [
+            "route" => 'atos',
+            "src" => "images/e-bom-2.png",
+            "description" => "e-BOM"
+        ],
 
     ]
 

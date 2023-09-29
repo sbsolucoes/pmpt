@@ -31,7 +31,8 @@ class AtosTipoSeed extends Seeder
             ["Conselho Municipal de Política Cultural", "CMPC"],
             "Conselho Deliberativo do Fundo Social de Solidariedade",
             ["Conselho Municipal de Políticas sobre Drogas", "COMAD"],
-            ["Conselho Municipal de Segurança", "CONSEG"]
+            ["Conselho Municipal de Segurança", "CONSEG"],
+            ["Boletim Oficial do Município - Eletrônico", "e-BOM"]
         ];
 
         foreach ($atosTipos as $tipo) {
