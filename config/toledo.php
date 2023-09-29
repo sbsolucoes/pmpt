@@ -72,7 +72,7 @@ return [
         ],
         [
             "route" => 'atos',
-            "src" => "images/e-bom-2.png",
+            "src" => "images/e-bom-2.PNG",
             "description" => "e-BOM"
         ],
 
