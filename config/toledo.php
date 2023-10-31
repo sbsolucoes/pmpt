@@ -71,7 +71,11 @@ return [
             "description" => "Transparéncia"
         ],
         [
-            "link" => "https://legislativo.pedrodetoledo.sp.gov.br/pdf/e-bom-001-2023.pdf",
+
+            //"link" => "https://legislativo.pedrodetoledo.sp.gov.br/pdf/e-bom-001-2023.pdf",
+
+            "route" => "atos",
+            "get" => "/boletim-oficial-do-municipio-eletronico",
             "src" => "images/e-bom-2.PNG",
             "description" => "e-BOM"
         ],
