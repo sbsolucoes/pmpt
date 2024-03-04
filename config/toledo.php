@@ -10,7 +10,7 @@ return [
         "5" => "Pregão Eletrônico",
         "6" => "Pregão Presencial",
         "7" => "Tomada de Preços",
-        "8" => "Aviso de dispensa presencial"
+        "8" => "Aviso de Dispensa"
     ],
 
     'links' => [
