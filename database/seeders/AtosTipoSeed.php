@@ -24,7 +24,7 @@ class AtosTipoSeed extends Seeder
             ["Conselho Municipal da Pessoa com Deficiência", "CONDEFI"],
             ["Conselho Municipal da Saúde", "CMS"],
             ["Conselho Municipal do Turismo", "COMTUR"],
-            ["Conselho Municipal de Educação Conselho Municipal de Alimentação Escolar", "CAE"],
+            ["Conselho Municipal de Alimentação Escolar", "CAE"],
             ["Conselho Municipal de Acompanhamento e Controle Social do FUNDEB", "CACS FUNDEB"],
             ["Conselho Municipal do Idoso Conselho Municipal de Assistência Social", "CAS"],
             "Conselho Municipal de Desenvolvimento Rural de Pedro de Toledo",
@@ -32,7 +32,8 @@ class AtosTipoSeed extends Seeder
             "Conselho Deliberativo do Fundo Social de Solidariedade",
             ["Conselho Municipal de Políticas sobre Drogas", "COMAD"],
             ["Conselho Municipal de Segurança", "CONSEG"],
-            ["Boletim Oficial do Município - Eletrônico", "e-BOM"]
+            ["Boletim Oficial do Município - Eletrônico", "e-BOM"],
+            ["Conselho Municipal de Educação", "CME"]
         ];
 
         foreach ($atosTipos as $tipo) {

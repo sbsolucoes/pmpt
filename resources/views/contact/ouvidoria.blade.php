@@ -6,6 +6,8 @@
 <div class="container">
     <div class="row">
 
+        
+
         <div class="col-md-6 jumbotron mx-auto">
             <form action="{{ url('/') }}" method="POST">
                 {{ csrf_field() }}
@@ -64,6 +66,7 @@
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
         </div>
+
     </div>
 </div>
 
