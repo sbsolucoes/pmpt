@@ -12,7 +12,7 @@
                             <br>
                             <p> <h2>Em cumprimento à Lei Eleitoral n° 9.504/1997, informamos que a veiculação de notícias no portal institucional da Câmara Municipal de Pedro de Toledo, bem como as atividades em nossas redes sociais, ficam suspensas a partir das 23h59 desta sexta-feira (05/07).</h2></p>
                         </div>
-                        
+                        <!--
                         @foreach ($noticias as $n)
                             <div class="col-sm-4">
                                 <div class="card border-0">
@@ -25,6 +25,7 @@
                                 </div>
                             </div>
                         @endforeach
+                        -->
                     </div>
                 </div>
             </div>

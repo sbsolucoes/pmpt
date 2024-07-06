@@ -70,7 +70,8 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('post.categories') }}">Noticias</a>
-                </li>-->
+                </li>
+                -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('conselhos') }}">Conselhos</a>
                 </li>
