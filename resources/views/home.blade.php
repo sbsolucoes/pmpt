@@ -14,7 +14,8 @@
 
 
 
-                        </div><!--
+                        </div>
+                        <!--
                         @foreach ($noticias as $n)
                             <div class="col-sm-4">
                                 <div class="card border-0">
