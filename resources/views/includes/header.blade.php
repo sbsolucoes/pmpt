@@ -65,12 +65,14 @@
                     </ul>
                 </li>
 
-                <!--<li class="nav-item">
+                <!--
+                    <li class="nav-item">
                     <a class="nav-link" href="{{ route('contato') }}">Contato</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('post.categories') }}">Noticias</a>
                 </li>
+
                 -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('conselhos') }}">Conselhos</a>
