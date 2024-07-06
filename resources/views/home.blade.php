@@ -10,7 +10,7 @@
                         <div class="form-group">
                             <p><h1>Comunicado</h1></p>
                             <br>
-                            <p> <h2>Em cumprimento à Lei Eleitoral n° 9.504/1997, informamos que a veiculação de notícias no portal institucional da Câmara Municipal de Pedro de Toledo, bem como as atividades em nossas redes sociais, ficam suspensas a partir das 23h59 desta sexta-feira (05/07).</h2></p>
+                            <p> <h2>Em cumprimento à Lei Eleitoral n° 9.504/1997, informamos que a veiculação de notícias no portal institucional da Prefeitura Municipal de Pedro de Toledo, bem como as atividades em nossas redes sociais, ficam suspensas a partir das 23h59 desta sexta-feira (05/07).</h2></p>
                         </div>
                         <!--
 
@@ -26,7 +26,7 @@
                                 </div>
                             </div>
                         @endforeach
-                        
+
                         -->
                     </div>
                 </div>
