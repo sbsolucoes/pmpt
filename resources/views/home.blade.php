@@ -14,8 +14,8 @@
 
 
 
-                        </div>
-                        <!--@foreach ($noticias as $n)
+                        </div><!--
+                        @foreach ($noticias as $n)
                             <div class="col-sm-4">
                                 <div class="card border-0">
                                     <img src="{{ $n->url_file }}" class="card-img-top" alt="{{ $n->post_title }}" style="width: 100%; height: 287px">
@@ -26,8 +26,7 @@
                                     </div>
                                 </div>
                             </div>
-                        @endforeach
-                    -->
+                        @endforeach-->
                     </div>
                 </div>
             </div>
