@@ -44,10 +44,10 @@
                         <li><a class="dropdown-item" href="http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/websis/siapegov/arrecadacao/2via/index.php">Emissão de 2ª vias de Tributos e Taxas</a></li>
                         <li><a class="dropdown-item" href="http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/websis/siapegov/arrecadacao/itbi/itbi_login.php">Emissão de Guia de ITB</a></li>
                         <li><a class="dropdown-item" href="http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/websis/siapegov/recursos_humanos/grh/grh_rh_online.php">Folha de Pagamento Online</a></li>
-                        <li><a class="dropdown-item" href="http://legislativo.pedrodetoledo.sp.gov.br/pdf/modelo-de-declaracao-de-bens-e-valores.doc">Declaração Anual de Bens - Editável (Utilizar Edge ou Firefox)</a></li>
-                        <li><a class="dropdown-item" href="http://legislativo.pedrodetoledo.sp.gov.br/pdf/modelo-de-declaracao-de-bens-e-valores.pdf">Declaração Anual de Bens - PDF</a></li>
-                        <li><a class="dropdown-item" href="https://legislativo.pedrodetoledo.sp.gov.br/pdf/requerimento-abonada.pdf" target="_blank">Requerimento Falta Abonada</a></li>
-                        <li><a class="dropdown-item" href="https://legislativo.pedrodetoledo.sp.gov.br/pdf/autorizacao-retirada-cesta-basica.pdf" target="_blank">Autorização para retirada de Cesta Básica</a></li>
+                        <li><a class="dropdown-item" href="http://sistema.pedrodetoledo.sp.gov.br/pdf/modelo-de-declaracao-de-bens-e-valores.doc">Declaração Anual de Bens - Editável (Utilizar Edge ou Firefox)</a></li>
+                        <li><a class="dropdown-item" href="http://sistema.pedrodetoledo.sp.gov.br/pdf/modelo-de-declaracao-de-bens-e-valores.pdf">Declaração Anual de Bens - PDF</a></li>
+                        <li><a class="dropdown-item" href="https://sistema.pedrodetoledo.sp.gov.br/pdf/requerimento-abonada.pdf" target="_blank">Requerimento Falta Abonada</a></li>
+                        <li><a class="dropdown-item" href="https://sistema.pedrodetoledo.sp.gov.br/pdf/autorizacao-retirada-cesta-basica.pdf" target="_blank">Autorização para retirada de Cesta Básica</a></li>
                     </ul>
 
                 </li>
@@ -56,7 +56,7 @@
                         Atos Oficiais
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="https://legislativo.pedrodetoledo.sp.gov.br/pdf/lei-organica-atualizada-2019.pdf" target="_blank">Lei Orgânica</a></li>
+                        <li><a class="dropdown-item" href="https://sistema.pedrodetoledo.sp.gov.br/pdf/lei-organica-atualizada-2019.pdf" target="_blank">Lei Orgânica</a></li>
                         <li><a class="dropdown-item" href="{{ route('atos.key', 'leis') }}" alt="Leis">Leis</a></li>
                         <li><a class="dropdown-item" href="{{ route('atos.key', 'leis-complementares') }}" alt="Leis Complementares">Leis Complementares</a></li>
                         <li><a class="dropdown-item" href="{{ route('atos.key', 'decretos') }}" alt="Decretos">Decretos</a></li>
