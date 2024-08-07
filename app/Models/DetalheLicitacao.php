@@ -9,7 +9,7 @@ class DetalheLicitacao extends Model
 {
     use HasFactory;
 
-    protected $legislativo = "https://legislativo.pedrodetoledo.sp.gov.br/";
+    protected $legislativo = "https://sistema.pedrodetoledo.sp.gov.br/";
     protected $table = 'licitacaodetalhe';
 
     protected $fillable = [ 'idLicitacaoDelt','idLicitacao','tituloLicitacao','nomeArq','dtPub','status'];
