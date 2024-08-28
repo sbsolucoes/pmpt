@@ -8,7 +8,7 @@
                 <div class="col">
                     <div class="row g-5">
                         <div class="form-group">
-                            <p><h1>AUDIÊNCIA PÚBLICA - LOA 2025 - Partcipe!!!</h1></p>
+                            <p><h1>AUDIÊNCIA PÚBLICA - LOA 2025 - Participe</h1></p>
                             <br>
                             <p><h3>Entre 23/08/2024 a 07/09/2024, toda a população de Pedro de Toledo poderá participar com sugestões para elaboração da Lei Orçamentária Anual (LOA), exercício 2025, através do formulário online que está disponível aqui - <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfRCuWgFi_fYSrlXRelnMrL9-VxjUdJeGx3AuDVtK6hR9p3MA/viewform" target="_blank">Clique Aqui</a></h3></p>
                             <br>
