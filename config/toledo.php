@@ -15,7 +15,7 @@ return [
 
     'links' => [
         [
-            "link" => "http://pmpedrotoledo.geosiap.net.br/portal-transparencia/",
+            "link" => "http://pmpedrotoledo.geosiap.net.br:8843/portal-transparencia/",
             "src" => "images/transparencia.png",
             "description" => "Portal da Transparência"
         ],
@@ -25,7 +25,7 @@ return [
             "description" => "Leis Municipais"
         ],
         [
-            "link" => "http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/issonline/iss.login.php",
+            "link" => "http://pmpedrotoledo.geosiap.net.br:8843/pmpedrotoledo/issonline/iss.login.php",
             "src" => "images/nota-fiscal.png",
             "description" => "Nota Fiscal Eletrônica"
         ],
@@ -35,7 +35,7 @@ return [
             "description" => "Licitações"
         ],
         [
-            "link" => "http://pmpedrotoledo.geosiap.net.br/pmpedrotoledo/websis/portal_transparencia/financeiro/contas_publicas/index.php?consulta=sic",
+            "link" => "http://pmpedrotoledo.geosiap.net.br:8843/pmpedrotoledo/websis/portal_transparencia/financeiro/contas_publicas/index.php?consulta=sic",
             "src" => "images/sic.png",
             "description" => "Acesso à informação"
         ],
