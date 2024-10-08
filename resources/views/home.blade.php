@@ -12,9 +12,7 @@
                             <br>
                             <p><h3>Entre 23/08/2024 a 07/09/2024, toda a população de Pedro de Toledo poderá participar com sugestões para elaboração da Lei Orçamentária Anual (LOA), exercício 2025, através do formulário online que está disponível aqui - <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfRCuWgFi_fYSrlXRelnMrL9-VxjUdJeGx3AuDVtK6hR9p3MA/viewform" target="_blank">Clique Aqui</a></h3></p>
                             <br>
-                            <p><h1>Comunicado</h1></p>
-                            <br>
-                            <p> <h2>Em cumprimento à Lei Eleitoral n° 9.504/1997, informamos que a veiculação de notícias no portal institucional da Prefeitura Municipal de Pedro de Toledo, bem como as atividades em nossas redes sociais, ficam suspensas a partir das 23h59 desta sexta-feira (05/07).</h2></p>
+                            
                         </div>
 
 
@@ -31,7 +29,7 @@
                             </div>
                         @endforeach
 
-                        
+
                     </div>
                 </div>
             </div>
