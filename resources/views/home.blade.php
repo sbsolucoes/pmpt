@@ -8,11 +8,29 @@
                 <div class="col">
                     <div class="row g-5">
                         <div class="form-group">
+                            <!--
                             <p><h1>AUDIÊNCIA PÚBLICA - LOA 2025 - Participe</h1></p>
                             <br>
                             <p><h3>Entre 23/08/2024 a 07/09/2024, toda a população de Pedro de Toledo poderá participar com sugestões para elaboração da Lei Orçamentária Anual (LOA), exercício 2025, através do formulário online que está disponível aqui - <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfRCuWgFi_fYSrlXRelnMrL9-VxjUdJeGx3AuDVtK6hR9p3MA/viewform" target="_blank">Clique Aqui</a></h3></p>
                             <br>
-                            
+                            -->
+                            <h1>Comunicado: Retirada do IPTU 2025</h1>
+                            <p>
+                            A Prefeitura Municipal de Pedro de Toledo informa que a retirada dos carnês do IPTU 2025
+                            poderá ser realizada diretamente na sede da Prefeitura nos seguintes horários:
+                            </p>
+                            <ul>
+                            <li>Das 08h30 às 12h00</li>
+                            <li>Das 13h30 às 17h00</li>
+                            </ul>
+                            <p>
+                            Solicitamos que os munícipes compareçam munidos de documentos pessoais e, se possível,
+                            do número do cadastro do imóvel para agilizar o atendimento.
+                            </p>
+                            <p>
+                            Contamos com a colaboração de todos e agradecemos a sua compreensão.
+                            </p>
+
                         </div>
 
 
