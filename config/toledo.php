@@ -15,7 +15,7 @@ return [
 
     'links' => [
         [
-            "link" => "http://pmpedrotoledo.geosiap.net.br:8843/portal-transparencia/",
+            "link" => "https://pmpedrotoledo.geosiap.net.br:8843/portal-transparencia/",
             "src" => "images/transparencia.png",
             "description" => "Portal da Transparência"
         ],
