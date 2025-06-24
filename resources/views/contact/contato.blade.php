@@ -8,7 +8,7 @@
         <div class="col-md-6 offset mx-auto mt-5">
             <div class="card" >
                 <div class="card-header">
-                <a href="https://legislativo.pedrodetoledo.sp.gov.br/pdf/diversos/Relatorio-de-Gestao-Ouvidoria-Municipal-2023.pdf"> Relatório de Gestao Ouvidoria Municipal 2023</a>
+                <a href="https://sistema.pedrodetoledo.sp.gov.br/pdf/diversos/Relatorio-de-Gestao-Ouvidoria-Municipal-2023.pdf"> Relatório de Gestao Ouvidoria Municipal 2023</a>
                 </div>
             </div>
             <hr class="mt-2 mb-2">

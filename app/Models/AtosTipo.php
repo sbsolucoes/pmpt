@@ -31,7 +31,7 @@ class AtosTipo extends Model
     {
         return $this->has('atos')
         ->withCount(["atos" => function ($query){
-            return $query->where('status', true);
+            return $query->where('status', 1);
         }])
             ->onlyAdivices()
         ->get();
