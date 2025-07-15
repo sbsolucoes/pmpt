@@ -17,6 +17,7 @@
                         <div class="card-body">
                             <table class="table table-striped">
                                 <thead>
+                                     @if(isset($detalheLicitacao) && count($detalheLicitacao) > 0)
                                     <tr>
                                         <th scope="col">Número</th>
                                         <th scope="col">Data</th>
@@ -37,6 +38,13 @@
                                 @endforeach
                                 </tbody>
                             </table>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            @endif
+
+                                {{$detalheLicitacao->links()}}
+
+
                         </div>
                     </div>
                     <br>
