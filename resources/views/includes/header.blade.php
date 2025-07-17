@@ -35,15 +35,15 @@
                         Serviços
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="https://pmpedrotoledo.geosiap.net.br:8843/pmpedrotoledo/websis/siapegov/arrecadacao/baw/certidaoValorVenal.php">Certidão de Valor do Imóvel</a></li>
-                        <li><a class="dropdown-item" href="https://pmpedrotoledo.geosiap.net.br:8843/pmpedrotoledo/websis/siapegov/administrativo/gpro/protocolo_consulta.php">Consulta Protocolo</a></li>
-                        <li><a class="dropdown-item" href="https://pmpedrotoledo.geosiap.net.br:8843/pmpedrotoledo/websis/siapegov/arrecadacao/baw/veracidade_certidao.php">Consulta Veracidade de Certidão</a></li>
-                        <li><a class="dropdown-item" href="https://pmpedrotoledo.geosiap.net.br:8843/pmpedrotoledo/websis/siapegov/arrecadacao/iptu/iptu_consulta_pagamentos.php">Demostrativo de Pagamento de IPTU</a></li>
-                        <li><a class="dropdown-item" href="https://pmpedrotoledo.geosiap.net.br:8843/pmpedrotoledo/websis/siapegov/arrecadacao/baw/certidao.php?no_cpf=1">Emissão de Certidão de Débitos de Tributos Imobiliários e Mobiliários</a></li>
-                        <li><a class="dropdown-item" href="https://pmpedrotoledo.geosiap.net.br:8843/pmpedrotoledo/websis/siapegov/arrecadacao/baw/certidao.php?form=1&">Emissão de Certidão de Débitos de Tributos Imobiliários e Mobiliários com CPF</a></li>
-                        <li><a class="dropdown-item" href="https://pmpedrotoledo.geosiap.net.br:8843/pmpedrotoledo/websis/siapegov/arrecadacao/2via/index.php">Emissão de 2ª vias de Tributos e Taxas</a></li>
-                        <li><a class="dropdown-item" href="https://pmpedrotoledo.geosiap.net.br:8843/pmpedrotoledo/websis/siapegov/arrecadacao/itbi/itbi_login.php">Emissão de Guia de ITB</a></li>
-                        <li><a class="dropdown-item" href="https://pmpedrotoledo.geosiap.net.br:8843/pmpedrotoledo/websis/siapegov/recursos_humanos/grh/grh_rh_online.php">Folha de Pagamento Online</a></li>
+                        <li><a class="dropdown-item" href="https://pedrotoledo.geosiap.net.br:8843/pmpedrotoledo/websis/siapegov/arrecadacao/baw/certidaoValorVenal.php">Certidão de Valor do Imóvel</a></li>
+                        <li><a class="dropdown-item" href="https://pedrotoledo.geosiap.net.br:8843/pmpedrotoledo/websis/siapegov/administrativo/gpro/protocolo_consulta.php">Consulta Protocolo</a></li>
+                        <li><a class="dropdown-item" href="https://pedrotoledo.geosiap.net.br:8843/pmpedrotoledo/websis/siapegov/arrecadacao/baw/veracidade_certidao.php">Consulta Veracidade de Certidão</a></li>
+                        <li><a class="dropdown-item" href="https://pedrotoledo.geosiap.net.br:8843/pmpedrotoledo/websis/siapegov/arrecadacao/iptu/iptu_consulta_pagamentos.php">Demostrativo de Pagamento de IPTU</a></li>
+                        <li><a class="dropdown-item" href="https://pedrotoledo.geosiap.net.br:8843/pmpedrotoledo/websis/siapegov/arrecadacao/baw/certidao.php?no_cpf=1">Emissão de Certidão de Débitos de Tributos Imobiliários e Mobiliários</a></li>
+                        <li><a class="dropdown-item" href="https://pedrotoledo.geosiap.net.br:8843/pmpedrotoledo/websis/siapegov/arrecadacao/baw/certidao.php?form=1&">Emissão de Certidão de Débitos de Tributos Imobiliários e Mobiliários com CPF</a></li>
+                        <li><a class="dropdown-item" href="https://pedrotoledo.geosiap.net.br:8843/pmpedrotoledo/websis/siapegov/arrecadacao/2via/index.php">Emissão de 2ª vias de Tributos e Taxas</a></li>
+                        <li><a class="dropdown-item" href="https://pedrotoledo.geosiap.net.br:8843/pmpedrotoledo/websis/siapegov/arrecadacao/itbi/itbi_login.php">Emissão de Guia de ITB</a></li>
+                        <li><a class="dropdown-item" href="https://pedrotoledo.geosiap.net.br:8843/pmpedrotoledo/websis/siapegov/recursos_humanos/grh/grh_rh_online.php">Folha de Pagamento Online</a></li>
                         <li><a class="dropdown-item" href="https://sistema.pedrodetoledo.sp.gov.br/pdf/modelo-de-declaracao-de-bens-e-valores.doc">Declaração Anual de Bens - Editável (Utilizar Edge ou Firefox)</a></li>
                         <li><a class="dropdown-item" href="https://sistema.pedrodetoledo.sp.gov.br/pdf/modelo-de-declaracao-de-bens-e-valores.pdf">Declaração Anual de Bens - PDF</a></li>
                         <li><a class="dropdown-item" href="https://sistema.pedrodetoledo.sp.gov.br/pdf/requerimento-abonada.pdf" target="_blank">Requerimento Falta Abonada</a></li>
