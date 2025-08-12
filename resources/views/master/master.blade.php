@@ -41,13 +41,15 @@
 <!--ZOOM-->
 <script type="text/javascript">
     window.onload = function() {
+        @if(Route::is('home'))
+            Swal.fire({
+                imageUrl: "images/pop-up.jpg",
+                imageAlt: "Cerimônia de posse",
+                confirmButtonText: "Fechar",
+                confirmButtonColor: "darkred",
+            });
+        @endif
 
-        Swal.fire({
-            imageUrl: "images/pop-up.jpg",
-            imageAlt: "Cerimônia de posse",
-            confirmButtonText: "Fechar",
-            confirmButtonColor: "darkred",
-        });
 
         var elementBody = document.querySelector('body');
         var elementBtnIncreaseFont = document.getElementById('increase-font');
