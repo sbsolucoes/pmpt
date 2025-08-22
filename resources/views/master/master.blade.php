@@ -41,7 +41,7 @@
 <!--ZOOM-->
 <script type="text/javascript">
     window.onload = function() {
-        @if(Route::is('home') && false)
+        @if(Route::is('home'))
             Swal.fire({
                 imageUrl: "images/pop-up.jpg",
                 imageAlt: "Cerimônia de posse",
