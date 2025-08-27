@@ -6,7 +6,6 @@ services:
             args:
                 WWWGROUP: '${WWWGROUP}'
         image: sail-8.1/app
-        container_name: toledo_site
         extra_hosts:
             - 'host.docker.internal:host-gateway'
         ports:
