@@ -1,9 +1,7 @@
-# For more information: https://laravel.com/docs/sail
-version: '3'
 services:
     php:
         build:
-            context: ./docker/8.1
+            context: ./docker/8.0
             dockerfile: Dockerfile
             args:
                 WWWGROUP: '${WWWGROUP}'
