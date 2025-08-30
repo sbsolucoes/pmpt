@@ -12,10 +12,7 @@ class ComunicadoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        
-    }
+    public function index() {}
 
     /**
      * Show the form for creating a new resource.
@@ -30,7 +27,6 @@ class ComunicadoController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -47,6 +43,7 @@ class ComunicadoController extends Controller
     public function show($idComunicados)
     {
         $comunicados = Comunicado::findOrFail($idComunicados);
+
         return view('posts.comunicado', ['comunicados' => $comunicados]);
     }
 
@@ -64,7 +61,6 @@ class ComunicadoController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */

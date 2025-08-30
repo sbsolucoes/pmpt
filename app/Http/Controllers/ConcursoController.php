@@ -12,19 +12,20 @@ class ConcursoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function download($doc)
+    {
+        $path = public_path('doc', $doc);
 
-    public function download($doc){
-        $path=public_path('doc', $doc);
         return response()->download($path);
     }
-     
+
     public function index()
     {
-        //$concurso = Concurso::where('tipoConc', 'Concurso')->where('exibir', 1)->paginate(15);
+        // $concurso = Concurso::where('tipoConc', 'Concurso')->where('exibir', 1)->paginate(15);
 
         $concurso = Concurso::where('exibir', 1)->orderBy('data_Pub', 'desc')->paginate(15);
 
-        //dd($concurso);
+        // dd($concurso);
 
         return view('docs.concursos', compact('concurso'));
     }
@@ -42,7 +43,6 @@ class ConcursoController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -53,7 +53,6 @@ class ConcursoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Concurso  $concurso
      * @return \Illuminate\Http\Response
      */
     public function show(Concurso $concurso)
@@ -64,7 +63,6 @@ class ConcursoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Concurso  $concurso
      * @return \Illuminate\Http\Response
      */
     public function edit(Concurso $concurso)
@@ -75,8 +73,6 @@ class ConcursoController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Concurso  $concurso
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Concurso $concurso)
@@ -87,7 +83,6 @@ class ConcursoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Concurso  $concurso
      * @return \Illuminate\Http\Response
      */
     public function destroy(Concurso $concurso)

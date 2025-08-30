@@ -1,30 +1,28 @@
 <?php
 
-use App\Http\Controllers\Documentos\ConselhoController;
-use Illuminate\Support\Facades\Route;
-
-use App\Http\Controllers\NoticiaController;
+use App\Http\Controllers\ConcursoController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DocumentoController;
-use App\Http\Controllers\ConcursoController;
+use App\Http\Controllers\Documentos\ConselhoController;
+use App\Http\Controllers\NoticiaController;
 use App\Http\Controllers\PageController;
-
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\NoticiaController::class, 'index'])->name('home');
 
-Route::group(["prefix" => "contato"], function(){
+Route::group(['prefix' => 'contato'], function () {
     Route::get('', [ContactController::class, 'index'])->name('contato');
-    Route::post("contatoSend", [ContactController::class, "contatoEmail"])->name("contato.sendEmail");
+    Route::post('contatoSend', [ContactController::class, 'contatoEmail'])->name('contato.sendEmail');
 
 });
 
-Route::group(["prefix" => "ouvidoria"],function(){
+Route::group(['prefix' => 'ouvidoria'], function () {
     Route::get('', [ContactController::class, 'ouvidoria'])->name('ouvidoria');
-    Route::post("ouvidoriaSend", [ContactController::class, "ouvidoriaEmail"])->name("ouvidoria.sendEmail");
+    Route::post('ouvidoriaSend', [ContactController::class, 'ouvidoriaEmail'])->name('ouvidoria.sendEmail');
 });
 
 Route::get('publicacoes/categorias', [NoticiaController::class, 'showCategories'])->name('post.categories');
-Route::group(['prefix' => 'publicacao'], function(){
+Route::group(['prefix' => 'publicacao'], function () {
     Route::get('{slug}', [NoticiaController::class, 'postByCategorieSlug'])->name('post.byCategorySlug');
     Route::get('{categoria_slug}/{publicacao_slug}', [NoticiaController::class, 'show'])->name('noticias');
 });
@@ -34,32 +32,32 @@ Route::get('departamentos', [App\Http\Controllers\DepartamentoController::class,
 
 Route::get('hospedaria', [App\Http\Controllers\HospedariaController::class, 'index'])->name('hospedaria');
 
-Route::prefix('conselhos')->group(function() {
+Route::prefix('conselhos')->group(function () {
     Route::get('', [ConselhoController::class, 'index'])->name('conselhos');
     Route::get('{slug}', [ConselhoController::class, 'bySlug'])->name('conselho.bySlug');
 });
 
-Route::controller(DocumentoController::class)->prefix("documentos")->group(function(){
-    Route::get('','index')
+Route::controller(DocumentoController::class)->prefix('documentos')->group(function () {
+    Route::get('', 'index')
         ->name('atos');
-    Route::get('{ato}', "getAto")
-        ->name("atos.key");
+    Route::get('{ato}', 'getAto')
+        ->name('atos.key');
 });
 
 Route::get('educacao', [App\Http\Controllers\EducacaoController::class, 'index'])->name('educacao');
 Route::get('escolas', [App\Http\Controllers\EscolaController::class, 'index'])->name('escolas');
 
-Route::prefix("licitacao")->group(function(){
+Route::prefix('licitacao')->group(function () {
     Route::any('', [App\Http\Controllers\LicitacaoController::class, 'index'])->name('licitacao');
     Route::get('detalhes/{idLicitacao}', [App\Http\Controllers\DetalheLicitacaoController::class, 'index'])->name('licitacao.detalhe');
 });
 
-Route::prefix("concursos")->group(function(){
+Route::prefix('concursos')->group(function () {
     Route::get('', [ConcursoController::class, 'index'])->name('concursos');
     Route::get('detalhes/{id_conc}', [App\Http\Controllers\ConcursoDetalheController::class, 'show'])->name('conc_det');
     Route::get('download/{idConcdetalhe}', [App\Http\Controllers\ConcursoDetalheController::class, 'show'])->name('downloadfile');
 });
 
-Route::controller(PageController::class)->group(function(){
+Route::controller(PageController::class)->group(function () {
     Route::get('glossario', 'glossario')->name('glossario');
 });

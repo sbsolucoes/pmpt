@@ -2,41 +2,42 @@
 
 namespace App\Models;
 
-use App\Enuns\DocumentosEnum;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
-use Illuminate\Support\Str;
 
 class Documento extends Model
 {
     use HasFactory;
 
-    protected $legislativo = "https://sistema.pedrodetoledo.sp.gov.br/";
+    protected $legislativo = 'https://sistema.pedrodetoledo.sp.gov.br/';
 
     protected $table = 'atos_copy_2';
+
     protected $primaryKey = 'idAtos';
+
     protected $fillable = ['tipo_doc', 'numero', 'data', 'assunto', 'url', 'data_pub', 'pasta', 'status', 'atos_tipo_id'];
+
     protected $appends = [
-        'documentType'
+        'documentType',
     ];
+
     public $timestamps = false;
 
     protected $dates = [
-        "data"
+        'data',
     ];
 
-    //relations
+    // relations
 
     public function atosTipo(): \Illuminate\Database\Eloquent\Relations\HasOne
     {
         return $this->hasOne(AtosTipo::class, 'id', 'atos_tipo_id');
     }
 
-
-    //mutators
+    // mutators
     public function getFileAttribute(): string
     {
         return $this->legislativo.$this->url;
@@ -47,13 +48,12 @@ class Documento extends Model
         return Carbon::parse($this->data)->format('d/m/Y');
     }
 
-    //query
+    // query
     public function allDocuments(array $filters, int $perPage)
     {
         $query = $this->baseQuery();
 
-        if (Arr::get($filters, "nome", null))
-        {
+        if (Arr::get($filters, 'nome', null)) {
             $query->likeDescription($filters['nome']);
         }
 
@@ -69,8 +69,7 @@ class Documento extends Model
             $query->where('slug', $type);
         });
 
-        if (Arr::get($filters, "nome"))
-        {
+        if (Arr::get($filters, 'nome')) {
             $query->likeDescription($filters['nome']);
         }
 
@@ -79,12 +78,10 @@ class Documento extends Model
 
     }
 
-    //scopes
+    // scopes
 
     /**
      * retorna só os registro que estão ativos
-     * @param Builder $query
-     * @return Builder
      */
     public function scopeActive(Builder $query): Builder
     {
@@ -93,7 +90,7 @@ class Documento extends Model
 
     public function scopeLikeDescription(Builder $query, $description): Builder
     {
-        return $query->where("assunto", "LIKE", "%{$description}%");
+        return $query->where('assunto', 'LIKE', "%{$description}%");
     }
 
     public function scopeDefaultOrderBy(Builder $query): Builder
@@ -106,5 +103,4 @@ class Documento extends Model
     {
         return $this->with('atosTipo:id,descricao')->active();
     }
-
 }

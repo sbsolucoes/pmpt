@@ -4,10 +4,9 @@ namespace App\Providers;
 
 use App\View\Components\Form\Input;
 use App\View\Components\Form\TextArea;
-use Illuminate\Support\ServiceProvider;
-
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {

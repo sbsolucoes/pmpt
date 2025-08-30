@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Departamento;
-use App\Models\Diretor;
 use Illuminate\Http\Request;
 
 class DepartamentoController extends Controller
@@ -16,12 +15,11 @@ class DepartamentoController extends Controller
     public function index()
     {
         $departamento = Departamento::where('status', 1)->orderBy('nomeDepto', 'Asc')->with(['diretor'])->get();
-        
-        //dd($departamento);
-   
+
+        // dd($departamento);
 
         return view('posts.departamentos', compact('departamento'));
-       
+
     }
 
     /**
@@ -37,7 +35,6 @@ class DepartamentoController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -48,7 +45,6 @@ class DepartamentoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Departamento  $departamento
      * @return \Illuminate\Http\Response
      */
     public function show(Departamento $departamento)
@@ -59,7 +55,6 @@ class DepartamentoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Departamento  $departamento
      * @return \Illuminate\Http\Response
      */
     public function edit(Departamento $departamento)
@@ -70,8 +65,6 @@ class DepartamentoController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Departamento  $departamento
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Departamento $departamento)
@@ -82,7 +75,6 @@ class DepartamentoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Departamento  $departamento
      * @return \Illuminate\Http\Response
      */
     public function destroy(Departamento $departamento)

@@ -4,20 +4,21 @@ namespace App\Enuns;
 
 abstract class DocumentosEnum
 {
-
     const LEI = 67;
+
     const LEICOMPLEMENTAR = 68;
+
     const DECRETOS = 69;
+
     const PORTARIAS = 70;
 
     /**
      * Retorna qual o tipo de documeto que deve buscar
-     * @param string $humanziDocument
-     * @return int
      */
     public static function getDocument(string $humanziDocument): int
     {
         $documents = self::documentType();
+
         return $documents[$humanziDocument];
     }
 
@@ -27,7 +28,7 @@ abstract class DocumentosEnum
             'leis' => self::LEI,
             'lei-complementar' => self::LEICOMPLEMENTAR,
             'decretos' => self::DECRETOS,
-            'portarias' => self::PORTARIAS
+            'portarias' => self::PORTARIAS,
         ];
     }
 
@@ -35,6 +36,4 @@ abstract class DocumentosEnum
     {
         return array_keys(self::documentType());
     }
-
-
 }

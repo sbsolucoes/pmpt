@@ -7,10 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Hospedaria extends Model
 {
-    //protected $cms = 'https://cms.pedrodetoledo.sp.gov.br/wp-content';
+    // protected $cms = 'https://cms.pedrodetoledo.sp.gov.br/wp-content';
     use HasFactory;
+
     protected $table = 'hospedaria';
+
     protected $primaryKey = 'idHosp';
+
     protected $fillable = [
         'nome',
         'endereco',
@@ -20,12 +23,12 @@ class Hospedaria extends Model
         'tipo',
         'foto',
         'facebook',
-        'status'
+        'status',
     ];
-    //public $timestamps = false;
+    // public $timestamps = false;
 
-    public function getUrlFileAttribute(){
-        //return $this->legislativo.$this->url;
+    public function getUrlFileAttribute()
+    {
+        // return $this->legislativo.$this->url;
     }
-
 }

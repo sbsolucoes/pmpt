@@ -14,18 +14,17 @@ class PostGalery extends Model
     protected $fillable = [
         'post_id',
         'file_path',
-        'file_type'
+        'file_type',
     ];
 
     private $cms = 'https://cms.pedrodetoledo.sp.gov.br/';
 
     public function getFilePathAttribute(string $value): string
     {
-        if(app()->environment() != 'production'){
+        if (app()->environment() != 'production') {
             return "http://localhost:8000/{$value}";
         }
 
         return "{$this->cms}{$value}";
     }
-
 }

@@ -12,23 +12,23 @@ use Illuminate\Contracts\View\View;
 class NoticiaController extends Controller
 {
     /**
-     * @param Noticia $noticia
-     * @param Comunicado $comunicado
      * @return Application|Factory|View
      */
     public function index(Noticia $noticia, Comunicado $comunicado)
     {
         $noticias = $noticia->onlyActives();
         $comunicados = $comunicado->onlyActive();
-        return view('home', compact('noticias','comunicados'));
+
+        return view('home', compact('noticias', 'comunicados'));
 
     }
 
     public function showCategories(Categoria $categoria)
     {
-        $categorias = $categoria->withCount(['noticia' => function($query) {
+        $categorias = $categoria->withCount(['noticia' => function ($query) {
             $query->where('post_status', true);
         }])->active()->get();
+
         return view('posts.categorias', compact('categorias'));
     }
 
@@ -36,6 +36,7 @@ class NoticiaController extends Controller
     {
         $categoria = $categoria->bySlug($slug)->firstOrFail();
         $noticias = $noticia->getAllBySlug($slug);
+
         return view('posts.postByCategorySlug', compact('noticias', 'categoria'));
     }
 
@@ -43,7 +44,8 @@ class NoticiaController extends Controller
     {
 
         $noticia = $post->findBySlugs($categoriaSlug, $publicacaoSlug);
-        return view('posts.show',compact('noticia'));
+
+        return view('posts.show', compact('noticia'));
 
     }
 }

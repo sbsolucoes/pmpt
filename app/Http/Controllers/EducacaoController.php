@@ -14,7 +14,8 @@ class EducacaoController extends Controller
      */
     public function index()
     {
-        $educacao = educacao::where('status','=', 1)->orderBy('dtpub', 'Desc')->Paginate(15);
+        $educacao = educacao::where('status', '=', 1)->orderBy('dtpub', 'Desc')->Paginate(15);
+
         return view('docs.educacao', compact('educacao'));
     }
 
@@ -31,7 +32,6 @@ class EducacaoController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -64,7 +64,6 @@ class EducacaoController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */

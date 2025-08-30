@@ -10,14 +10,17 @@ class Input extends Component
      * @var string
      */
     public $name;
+
     /**
      * @var string
      */
     public $label;
+
     /**
      * @var string
      */
     public $type;
+
     /**
      * @var mixed|string
      */
@@ -28,7 +31,8 @@ class Input extends Component
      *
      * @return void
      */
-    public function __construct(string $name, string $label, string $type = 'text', $placeholder = ''){
+    public function __construct(string $name, string $label, string $type = 'text', $placeholder = '')
+    {
         $this->name = $name;
         $this->label = $label;
         $this->type = $type;

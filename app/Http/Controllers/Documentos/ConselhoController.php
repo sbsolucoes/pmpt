@@ -9,18 +9,18 @@ use Illuminate\Http\Request;
 
 class ConselhoController extends Controller
 {
-
     public function index(AtosTipo $atosTipo)
     {
         $conselhos = $atosTipo->getAdivices();
+
         return view('conselhos.index', compact('conselhos'));
     }
 
-    public function bySlug(Request $request,string $slug, Documento $documento)
+    public function bySlug(Request $request, string $slug, Documento $documento)
     {
         $documentos = $documento->findByType($slug, $request->all(), 15);
         $atoTipo = AtosTipo::select('descricao')->where('slug', $slug)->firstOrFail();
-        return view("docs.atos", compact('documentos', 'atoTipo'));
-    }
 
+        return view('docs.atos', compact('documentos', 'atoTipo'));
+    }
 }

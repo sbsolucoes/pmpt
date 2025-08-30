@@ -8,8 +8,6 @@ class OuvidoriaRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
-     *
-     * @return bool
      */
     public function authorize(): bool
     {
@@ -18,15 +16,13 @@ class OuvidoriaRequest extends FormRequest
 
     /**
      * Get the validation rules that apply to the request.
-     *
-     * @return array
      */
     public function rules(): array
     {
         return [
             'nome' => 'required|min:4',
             'email' => 'required|email',
-            'mensagem' => 'required|min:10'
+            'mensagem' => 'required|min:10',
         ];
     }
 }

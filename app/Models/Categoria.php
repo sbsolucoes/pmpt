@@ -12,10 +12,11 @@ class Categoria extends Model
     use HasFactory;
 
     protected $table = 'tb_categorias';
+
     protected $primaryKey = 'id';
 
     protected $fillable = [
-      "ds_categoria"
+        'ds_categoria',
     ];
 
     public function scopeBySlug(Builder $query, $slug)
@@ -23,9 +24,6 @@ class Categoria extends Model
         $query->where('slug', $slug);
     }
 
-    /**
-     * @return HasMany
-     */
     public function noticia(): HasMany
     {
         return $this->hasMany(Noticia::class);
@@ -35,5 +33,4 @@ class Categoria extends Model
     {
         $query->where('status', true);
     }
-
 }

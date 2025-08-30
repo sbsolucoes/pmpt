@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Licitacao;
-use App\Models\DetalheLicitacao;
-use Illuminate\Http\Request;
 
+use App\Models\DetalheLicitacao;
+use App\Models\Licitacao;
+use Illuminate\Http\Request;
 
 class DetalheLicitacaoController extends Controller
 {
@@ -12,20 +12,18 @@ class DetalheLicitacaoController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
-     */     
-   
-     public function index($idLicitacao)
-    {        
-        
+     */
+    public function index($idLicitacao)
+    {
+
         $licitacoes = Licitacao::findOrFail($idLicitacao);
 
         $detalheLicitacao = DetalheLicitacao::where('idLicitacao', $idLicitacao)->where('status', 1)->get();
 
-        //dd($licitacao, $detalheLicitacao);
-        return view('docs.detalheLicitacao', compact('licitacoes','detalheLicitacao'));
-        
+        // dd($licitacao, $detalheLicitacao);
+        return view('docs.detalheLicitacao', compact('licitacoes', 'detalheLicitacao'));
+
     }
-    
 
     /**
      * Show the form for creating a new resource.
@@ -40,7 +38,6 @@ class DetalheLicitacaoController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -56,28 +53,27 @@ class DetalheLicitacaoController extends Controller
      */
     public function show($idLicitacao)
     {
-        
+
         $licitacao = Licitacao::findOrFail($idLicitacao);
-        //$dt_licitacao = DetalheLicitacao::where('idLicitacao', $licitacao->idLicitacao)->first()->toArray();
+        // $dt_licitacao = DetalheLicitacao::where('idLicitacao', $licitacao->idLicitacao)->first()->toArray();
 
-        //$licitacao = Licitacao::with('detalheLicitacao')->get();
-        
-        //$licitacao = Licitacao::where('idLicitacao', $idLicitacao )->with('detalheLicitacao')->find($idLicitacao) ;  
+        // $licitacao = Licitacao::with('detalheLicitacao')->get();
 
-                //dd($licitacao);
-        
-        //foreach($licitacao as $lc) {
-            //echo "$lc->nomeArq";
+        // $licitacao = Licitacao::where('idLicitacao', $idLicitacao )->with('detalheLicitacao')->find($idLicitacao) ;
 
-        //}
-        return view('docs.detalheLicitacao', compact('licitacao',));
-        
+        // dd($licitacao);
+
+        // foreach($licitacao as $lc) {
+        // echo "$lc->nomeArq";
+
+        // }
+        return view('docs.detalheLicitacao', compact('licitacao'));
+
     }
-    
+
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\DetalheLicitacao  $detalheLicitacao
      * @return \Illuminate\Http\Response
      */
     public function edit(DetalheLicitacao $detalheLicitacao)
@@ -88,8 +84,6 @@ class DetalheLicitacaoController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\DetalheLicitacao  $detalheLicitacao
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, DetalheLicitacao $detalheLicitacao)
@@ -100,7 +94,6 @@ class DetalheLicitacaoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\DetalheLicitacao  $detalheLicitacao
      * @return \Illuminate\Http\Response
      */
     public function destroy(DetalheLicitacao $detalheLicitacao)

@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Hospedaria;
+use Illuminate\Http\Request;
 
 class HospedariaController extends Controller
 {
@@ -15,7 +15,7 @@ class HospedariaController extends Controller
     public function index()
     {
         $hospedaria = Hospedaria::orderBy('nome', 'Asc')->Paginate(9);
-        
+
         return view('posts.hospedaria', compact('hospedaria'));
     }
 
@@ -32,7 +32,6 @@ class HospedariaController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -65,7 +64,6 @@ class HospedariaController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */

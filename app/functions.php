@@ -3,6 +3,6 @@
 function firstWordInUpperCase(string $value): string
 {
     return ucwords(
-        str_replace("-", " ", $value)
+        str_replace('-', ' ', $value)
     );
 }

@@ -10,18 +10,16 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class AtosTipo extends Model
 {
     use HasFactory;
+
     protected $table = 'atos_tipos';
 
-    //relations
-    /**
-     * @return BelongsTo
-     */
+    // relations
     public function atos(): BelongsTo
     {
         return $this->belongsTo(Documento::class, 'id', 'atos_tipo_id');
     }
 
-    //scopes
+    // scopes
     public function scopeOnlyAdivices(Builder $query)
     {
         $query->where('is_conselho', true);
@@ -30,13 +28,10 @@ class AtosTipo extends Model
     public function getAdivices()
     {
         return $this->has('atos')
-        ->withCount(["atos" => function ($query){
-            return $query->where('status', 1);
-        }])
+            ->withCount(['atos' => function ($query) {
+                return $query->where('status', 1);
+            }])
             ->onlyAdivices()
-        ->get();
+            ->get();
     }
-
-
-
 }

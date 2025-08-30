@@ -10,18 +10,22 @@ class TextArea extends Component
      * @var string
      */
     public $name;
+
     /**
      * @var string
      */
     public $label;
+
     /**
      * @var int
      */
     public $cols;
+
     /**
      * @var int
      */
     public $rows;
+
     /**
      * @var string
      */

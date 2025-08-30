@@ -11,9 +11,13 @@ use Illuminate\Support\Str;
 class Noticia extends Model
 {
     protected $cms = 'https://cms.pedrodetoledo.sp.gov.br/wp-content';
+
     use HasFactory;
+
     protected $table = 'tb_posts';
+
     protected $primaryKey = 'id';
+
     protected $fillable = [
         'categoria_id',
         'post_title',
@@ -21,16 +25,14 @@ class Noticia extends Model
         'post_content',
         'guid',
         'post_date',
-        'post_status'
+        'post_status',
     ];
-    //public $timestamps = false;
+    // public $timestamps = false;
 
-    /**
-     * @return string
-     */
     public function getUrlFileAttribute(): string
     {
         $url = explode('wp-content', $this->guid)[1];
+
         return $this->cms.$url;
     }
 
@@ -38,7 +40,6 @@ class Noticia extends Model
     {
         return Str::upper($value);
     }
-
 
     public function categoria(): HasOne
     {
@@ -51,31 +52,30 @@ class Noticia extends Model
     }
 
     /**
-     * @param string $slug
      * @return mixed
      */
     public function getAllBySlug(string $slug)
     {
-        return $this->wherehas('categoria', function($query) use($slug) {
+        return $this->wherehas('categoria', function ($query) use ($slug) {
             $query->where([
                 'slug' => $slug,
-                'status' => true
+                'status' => true,
             ]);
         })->with('categoria')
-            ->where("post_status", true)
+            ->where('post_status', true)
             ->orderBy('post_date', 'DESC')->paginate(15);
     }
 
     public function findBySlugs(string $cagoriaSlug, string $postSlug)
     {
-        return $this->with(['galeriaImagens'])->whereHas('categoria', function($query) use($cagoriaSlug){
+        return $this->with(['galeriaImagens'])->whereHas('categoria', function ($query) use ($cagoriaSlug) {
             $query->where([
                 'slug' => $cagoriaSlug,
-                'status' => true
+                'status' => true,
             ]);
         })->where([
             'post_name' => $postSlug,
-            'post_status' => true
+            'post_status' => true,
         ])->firstOrFail();
     }
 
@@ -91,5 +91,4 @@ class Noticia extends Model
     {
         $this->where('post_status', true);
     }
-
 }

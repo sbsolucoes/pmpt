@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Models\Escola;
+use Illuminate\Http\Request;
 
 class EscolaController extends Controller
 {
@@ -16,6 +15,7 @@ class EscolaController extends Controller
     public function index()
     {
         $escolas = Escola::orderBy('nome', 'Asc')->Paginate(15);
+
         return view('docs.escolas', compact('escolas'));
     }
 
@@ -32,7 +32,6 @@ class EscolaController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -65,7 +64,6 @@ class EscolaController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
