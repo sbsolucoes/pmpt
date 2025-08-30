@@ -1,14 +1,11 @@
-# For more information: https://laravel.com/docs/sail
-version: '3'
 services:
     php:
         build:
-            context: ./docker/8.1
+            context: ./docker/8.0
             dockerfile: Dockerfile
             args:
                 WWWGROUP: '${WWWGROUP}'
         image: sail-8.1/app
-        container_name: toledo_site
         extra_hosts:
             - 'host.docker.internal:host-gateway'
         ports:
